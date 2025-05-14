@@ -18,7 +18,9 @@
 
 body {
   background-color: var(--stovet);
+  overflow: hidden;
 }
+
 
 h1{
     font-family: var(--overskrift);
@@ -27,5 +29,66 @@ h1{
     text-transform: uppercase;
     display: flex;
     justify-content: center;
-    color: var(--hvid);
+    color: var(--rose);
+    z-index: 1;
+}
+
+#baggrundsfigur{
+    width: 40%;
+    height: auto;
+    margin: 2%;
+}
+
+.figur {
+  position: absolute;
+  width: 60px; 
+  z-index: 0; /* bag indhold */
+  pointer-events: none; /* så den ikke forstyrrer klik */
+}
+
+.figur1 {
+  top: 8%;
+  left: 37%;
+  transform: rotate(90deg); /* Roterer med uret */
+}
+
+.figur2 {
+  top: 30%;
+  left: 50%;
+  transform: rotate(210deg); /* Roterer med uret */
+}
+
+.figur3 {
+  top: 30%;
+  left: 50%;
+}
+
+.figur4 {
+  top: 30%;
+  left: 50%;
+}
+
+.figur5 {
+  top: 30%;
+  left: 50%;
+}
+
+.figur6 {
+  top: 30%;
+  left: 50%;
+}
+
+.figur7 {
+  top: 30%;
+  left: 50%;
+}
+
+.figur8 {
+  top: 30%;
+  left: 50%;
+}
+
+.figur9 {
+  top: 30%;
+  left: 50%;
 }
