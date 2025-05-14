@@ -1,0 +1,79 @@
+:root{
+    /*Farver*/
+    --hvid: #FFF2E1;
+    --rose: #FBC6C5;
+    --støvet: #D16A68;
+    --blod: #610505;
+    --maroon: #840A08;
+    --postkasserod:#A71916;
+    --lilla: #200728;
+
+      /* Fonte */
+    --brodtekst: 'lato', sans-serif;
+    --brodtekst-tynd: 300;
+    --brodtekst-regular: 300;
+    --overskrift: 'poppins', sans-serif;
+    --overskrift-tyk: 900;
+}
+
+.knap {
+    position: absolute;
+    width: 15%; /* Tilpas størrelse */
+    height: auto;
+    cursor: pointer;
+    margin: 0;
+    z-index: 1000; /*Placerer knapperne foran figuren*/
+}
+
+.menstruation {
+    top: 0;
+    left: 0;
+}
+
+.follikulær {
+        top: 0;
+        right: 0;
+}
+
+.ægløsning {
+    bottom: 0;
+    right: 0;
+}
+  
+.luteal {
+    bottom: 0;
+    left: 0;
+}
+
+body {
+    background-color: var(--lilla);
+}
+
+#overskrift {
+    fill: var(--hvid); /*Teksten farve*/
+    font-family: var(--overskrift); /*Font til overskrift*/
+    font-weight: var(--overskrift-tyk); /*Tykkelse på font*/
+    text-transform: uppercase; /*Sørger for det er blokbogstaver*/
+    font-size: 265%; /*tekst størrelse*/
+    justify-self: center; /*centere teksten*/
+}
+
+
+/*3D FIGUR*/
+  .parallax-section {
+    height: 53vh; /*Sektionen fylder 53% af højden*/
+    display: flex; /*Centrere indholdet med flexbox*/
+    justify-content: center; 
+    align-items: center; 
+    position: relative;
+    z-index: 1; /*Placerer figuren bagved knapperne*/
+  }
+
+  /*Størrelse på 3D figur*/
+  model-viewer {
+    width: 275%; /*Sætter figurens bredde på 270% af containeren - gør den derfor meget stor og skaber blikfang*/ 
+    height: 275%; /*Sætter figurens højde på 270% af containeren*/
+    transform: translateY(40px); /*Flytter figuren lidt ned*/
+  }
+  
+
