@@ -17,14 +17,14 @@
 }
 
 body {
-  background-color: var(--hvid);
+  background-color: var(--hvid); /*Baggrundsfarven*/
 }
 
 h1{
-    font-family: var(--overskrift);
-    font-weight: var(--overskrift-tyk);
-    font-size: 400%;
-    color: var(--støvet);
-    text-transform: uppercase;
-    justify-self: center;
+    font-family: var(--overskrift);/*Tekstens font */
+    font-weight: var(--overskrift-tyk);/*Tykkelse på fonten */
+    font-size: 400%; /*tekst størrelse*/
+    color: var(--støvet); /*Teksten farve*/
+    text-transform: uppercase; /*Gør alle bogstver store*/
+    justify-self: center; /*Centrere teksten*/
 }
