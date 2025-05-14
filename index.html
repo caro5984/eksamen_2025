@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menstruation</title>
+   
+    <!--Logo-->
+    <link rel="icon" type="image/x-icon" href="/images/Bloddråbe original .png">
+
+    <!-- Font fra google fonts: https://fonts.google.com/selection -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
+
+    <!--3D figur-->
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+</head>
+<body>
+
+<header>
+    <img src="images/knap1.png" alt="Knap øverst venstre" class="knap menstruation">
+    <img src="images/knap2.png" alt="Knap øverst højre" class="knap follikulær">
+    <img src="images/knap3.png" alt="Knap nederst højre" class="knap ægløsning">
+    <img src="images/knap4.png" alt="Knap nederst venstre" class="knap luteal">
+</header>
+<main>
+
+    <div id="overskrift">
+        <!--der bruges svg width og height til at tegne en kurve og placere tekst langs den-->
+        <svg width="600" height="200">
+        <!--en kurvet linje defineret med en path. 
+        'fill="none"' gør, at den ikke bliver udfyldt
+        'stroke="none"' gør, at linjen ikke vises
+        'd=' omhandler hvor kurven starter, hvor meget den bøjer og hvor den slutter -->
+          <path id="kurve" fill="none" stroke="none" 
+          d="M 50 150 Q 300 0 550 150" />
+
+          <!-- tekst element der indeholder textPath-->
+          <text>
+          <!-- 'textPath' placerer teksten langs den tidligere definerede kurve.
+           'startOffset="50%"' betyder, at teksten starter midt på kurven
+           'text-anchor="middle"' centrerer teksten i forhold til startpunktet -->
+            <textPath href="#kurve" startOffset="50%" text-anchor="middle">
+            Menstruationscyklus
+            </textPath>
+          </text>
+        </svg>
+      </div>
+
+<!--3D figur-->
+        <section class="parallax-section">
+            <model-viewer class="3dfigur" 
+            src="models/3d_figur3.glb" alt="3D figur" 
+            auto-rotate camera-controls camera-orbit="180deg 0deg auto" 
+            disable-zoom></model-viewer>
+          </section>
+
+
+<script src="js/index.js"></script>
+</body>
+</html>
