@@ -21,34 +21,46 @@ body {
 }
 
 .knap {
-    position: absolute;
-    width: 15%; /* Tilpas størrelse */
-    height: auto;
-    cursor: pointer;
-    margin: 0;
-    z-index: 1000; /*Placerer knapperne foran figuren*/
+  position: absolute;
+  width: 15%;
+  height: auto;
+  cursor: pointer;
 }
 
-.menstruation {
-    top: 0;
-    left: 0;
+.top-left { 
+  top: 0; 
+  left: 0; 
 }
 
-.follikulær {
-        top: 0;
-        right: 0;
+.top-right { 
+  top: 0; 
+  right: 0; 
 }
 
-.ægløsning {
-    bottom: 0;
-    right: 0;
-}
-  
-.luteal {
-    bottom: 0;
-    left: 0;
+.bottom-left { 
+  bottom: 0; 
+  left: 0; 
 }
 
+.bottom-right { 
+  bottom: 0; 
+  right: 0; 
+}
+
+.transition-overlay {
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.7s ease-in-out, background-color 0.2s;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+.transition-overlay.expand {
+  transform: translate(-50%, -50%) scale(50);
+}
 
 #overskrift {
     fill: var(--hvid); /*Teksten farve*/
