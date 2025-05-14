@@ -22,7 +22,10 @@ modelViewer.addEventListener('camera-change', () => {
   }, 1200); // 1200 millisekunder = 1,2 sekunder
 });
 
-//knapperne
+/** Får knapperne på forsiden til at flyde over siden som en glidende overgang til den næste side, med et overlay i knappens farve */
+
+
+//knapperne på forsiden
 const links = document.querySelectorAll('a[href$=".html"]');
 const overlay = document.getElementById('transitionOverlay');
 
