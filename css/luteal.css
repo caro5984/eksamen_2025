@@ -19,3 +19,12 @@
 body {
   background-color: var(--stovet);
 }
+
+h1{
+    font-family: var(--overskrift);
+    font-weight: var(--overskrift-tyk);
+    font-size: 400%;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+}
