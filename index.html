@@ -21,10 +21,8 @@
 <body>
 
 <header>
-    <img src="images/knap1.png" alt="Knap øverst venstre" class="knap menstruation">
-    <img src="images/knap2.png" alt="Knap øverst højre" class="knap follikulær">
-    <img src="images/knap3.png" alt="Knap nederst højre" class="knap ægløsning">
-    <img src="images/knap4.png" alt="Knap nederst venstre" class="knap luteal">
+     
+
 </header>
 <main>
 
@@ -57,6 +55,26 @@
             auto-rotate camera-controls camera-orbit="180deg 0deg auto" 
             disable-zoom></model-viewer>
           </section>
+
+<!-- Knapper der henviser til de andre sider -->
+<a href="menstruation.html" data-farve="#610505">
+  <img src="images/knap1.png" alt="Gå til menstruationsfasen" class="knap top-left">
+</a>
+
+<a href="follikulaer.html" data-farve="#fbc6c5">
+  <img src="images/knap2.png" alt="Gå til follikulærfasen" class="knap top-right">
+</a>
+
+<a href="aegloesning.html" data-farve="#fff2e1">
+  <img src="images/knap3.png" alt="Gå til ægløsning" class="knap bottom-right">
+</a>
+
+<a href="luteal.html" data-farve="#d16a68">
+  <img src="images/knap4.png" alt="Gå til lutealfasen" class="knap bottom-left">
+</a>
+
+<!-- Overlay til animation -->
+<div class="transition-overlay" id="transitionOverlay"></div>
 
 
 <script src="js/index.js"></script>
