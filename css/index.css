@@ -16,6 +16,10 @@
     --overskrift-tyk: 900;
 }
 
+body {
+  background-color: var(--lilla);
+}
+
 .knap {
     position: absolute;
     width: 15%; /* Tilpas størrelse */
@@ -45,9 +49,6 @@
     left: 0;
 }
 
-body {
-    background-color: var(--lilla);
-}
 
 #overskrift {
     fill: var(--hvid); /*Teksten farve*/
