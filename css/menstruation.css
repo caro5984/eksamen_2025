@@ -17,5 +17,16 @@
 }
 
 body {
-  background-color: var(--lilla);
+  background-color: var(--blod);
+}
+
+
+h1{
+    font-family: var(--overskrift);/*Tekstens font */
+    font-weight: var(--overskrift-tyk);/*Tykkelse på fonten */
+    font-size: 400%; /*tekst størrelse*/
+    color: var(--støvet); /*Teksten farve*/
+    text-transform: uppercase; /*Gør alle bogstver store*/
+    justify-self: center; /*Centrere teksten*/
+    color: var(--rose);
 }
