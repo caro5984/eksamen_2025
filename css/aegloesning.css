@@ -1,0 +1,30 @@
+:root{
+    /*Farver*/
+    --hvid: #FFF2E1;
+    --rose: #FBC6C5;
+    --støvet: #D16A68;
+    --blod: #610505;
+    --maroon: #840A08;
+    --postkasserod:#A71916;
+    --lilla: #200728;
+
+      /* Fonte */
+    --brodtekst: 'lato', sans-serif;
+    --brodtekst-tynd: 300;
+    --brodtekst-regular: 300;
+    --overskrift: 'poppins', sans-serif;
+    --overskrift-tyk: 900;
+}
+
+body {
+  background-color: var(--hvid);
+}
+
+h1{
+    font-family: var(--overskrift);
+    font-weight: var(--overskrift-tyk);
+    font-size: 400%;
+    color: var(--støvet);
+    text-transform: uppercase;
+    justify-self: center;
+}
