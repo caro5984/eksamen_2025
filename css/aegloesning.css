@@ -19,3 +19,12 @@
 body {
   background-color: var(--hvid);
 }
+
+h1{
+    font-family: var(--overskrift);
+    font-weight: var(--overskrift-tyk);
+    font-size: 400%;
+    color: var(--støvet);
+    text-transform: uppercase;
+    justify-self: center;
+}
