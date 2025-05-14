@@ -75,7 +75,7 @@ body {
     width: 275%; /*Sætter figurens bredde på 270% af containeren - gør den derfor meget stor og skaber blikfang*/ 
     height: 275%; /*Sætter figurens højde på 270% af containeren*/
     transform: translateY(40px); /*Flytter figuren lidt ned*/
-    transition: all 1s ease;
+    transition: all 1s ease; /*Gør overgangen for at få "bolden" til at flyve tilbage mere smooth*/
   }
 
   

@@ -1,3 +1,7 @@
+/**
+ * 
+ * ChatGPT: "Kan jeg få min 3D figur til at flyve tilbage til standpunktet? (https://chatgpt.com/share/682454f2-7ac8-8009-a73a-6c2de8057fc5)"
+ */
 const modelViewer = document.querySelector('model-viewer');
 
 // Gem startpositionen for kameraet
