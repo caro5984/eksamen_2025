@@ -16,37 +16,65 @@
     --overskrift-tyk: 900;
 }
 
+html, body {
+  margin: 0; /* Fjerner standard margin */
+  padding: 0; /* Fjerner standard padding */
+  width: 100%; /* Gør elementet 100% af viewportens bredde */
+  height: 100%; /* Gør elementet 100% af viewportens højde */
+  overflow: hidden; /* Forhindrer både vandret og lodret scroll */
+  touch-action: none; /* Forhindrer swipe, pinch-zoom og anden touch-adfærd på touch-skærme */
+}
+
 body {
   background-color: var(--lilla);
 }
 
 .knap {
-  position: absolute;
-  width: 15%;
-  height: auto;
-  cursor: pointer;
-}
+  position: absolute; /* Gør det muligt at placere knapperne i hjørnerne */
+  width: 15%; /* Knappernes størrelse */
+  height: auto; /* Knappernes størrelse */
+  display: block; /* Sørger for hele billedområdet er klikbart */
+  cursor: pointer; /* Gør musen til en pegende hånd ved hover */
+  z-index: 10; /* Sørger for at knapperne ligger over andre elementer */
+} 
 
-.top-left { 
+/* Placering af knapper i hvert hjørne af skærmen */
+.menstruation { 
   top: 0; 
   left: 0; 
 }
 
-.top-right { 
+.follikulaer { 
   top: 0; 
   right: 0; 
 }
 
-.bottom-left { 
+.luteal { 
   bottom: 0; 
   left: 0; 
 }
 
-.bottom-right { 
+.aegloesning { 
   bottom: 0; 
   right: 0; 
 }
 
+/* Styling af animation når man trykker på knapperne i hjørnerne på forsiden */
+.transition-overlay {
+  position: fixed; /* Placeres relativt til viewporten */
+  width: 100px; /* Startstørrelse på overlay */
+  height: 100px; /* Startstørrelse på overlay */
+  border-radius: 50%; /* Gør overlayet til en cirkel */
+  transform: translate(-50%, -50%) scale(0); /* Positioneres fra midten og starter med 0 størrelse */
+  transition: transform 0.7s ease-in-out, /* Animation: udvidelse af cirklen */
+              background-color 0.2s; /* Farveskift går hurtigere */
+  z-index: 1000; /* Ligger over alt andet på siden */
+  pointer-events: none; /* Gør det ikke interaktivt – klik går igennem */
+}
+
+.transition-overlay.expand {
+  transform: translate(-50%, -50%) scale(50); /* Når .expand tilføjes, udvides overlayet dramatisk */
+}
 
 #overskrift {
     fill: var(--hvid); /*Teksten farve*/
@@ -76,5 +104,4 @@ body {
     transition: all 2s ease; /*Gør overgangen for at få "bolden" til at flyve tilbage mere smooth*/
   }
 
-  
-
+ 

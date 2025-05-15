@@ -18,13 +18,89 @@
 
 body {
   background-color: var(--stovet);
+  overflow: hidden;
 }
 
-h1{
-    font-family: var(--overskrift);
-    font-weight: var(--overskrift-tyk);
-    font-size: 400%;
-    text-transform: uppercase;
-    display: flex;
-    justify-content: center;
+.knap {
+  position: absolute; /* Gør det muligt at placere knapperne i hjørnerne */
+  width: 5%; /* Knappernes størrelse */
+  height: auto; /* Knappernes størrelse */
+  display: block; /* Sørger for hele billedområdet er klikbart */
+  cursor: pointer; /* Gør musen til en pegende hånd ved hover */
+  z-index: 10; /* Sørger for at knapperne ligger over andre elementer */
+} 
+
+/* Placering af knapper i hvert hjørne af skærmen */
+.tilbage { 
+  top: 20; 
+  left: 20; 
+}
+
+h1 {
+  font-family: var(--overskrift);/* Tekstens font */
+  font-weight: var(--overskrift-tyk);/* Tykkelse på fonten */
+  font-size: 400%; /* Tekst størrelse */
+  color: var(--rose); /* Teksten farve */
+  text-transform: uppercase; /* Gør alle bogstver store */
+  justify-self: center; /* Centrere teksten */
+}
+
+#baggrundsfigur{
+    width: 40%;
+    height: auto;
+    margin: 2%;
+}
+
+.figur {
+  position: absolute;
+  width: 60px; 
+  z-index: 0; /* bag indhold */
+  pointer-events: none; /* så den ikke forstyrrer klik */
+}
+
+.figur1 {
+  top: 8%;
+  left: 37%;
+  transform: rotate(90deg); /* Roterer med uret */
+}
+
+.figur2 {
+  top: 30%;
+  left: 50%;
+  transform: rotate(210deg); /* Roterer med uret */
+}
+
+.figur3 {
+  top: 30%;
+  left: 50%;
+}
+
+.figur4 {
+  top: 30%;
+  left: 50%;
+}
+
+.figur5 {
+  top: 30%;
+  left: 50%;
+}
+
+.figur6 {
+  top: 30%;
+  left: 50%;
+}
+
+.figur7 {
+  top: 30%;
+  left: 50%;
+}
+
+.figur8 {
+  top: 30%;
+  left: 50%;
+}
+
+.figur9 {
+  top: 30%;
+  left: 50%;
 }
