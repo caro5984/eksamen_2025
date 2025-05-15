@@ -86,7 +86,7 @@ body {
 
 /*3D FIGUR*/
   .parallax-section {
-    height: 47vh; /*Sektionen fylder 50% af højden*/
+    height: 49vh; /*Sektionen fylder 50% af højden*/
     display: flex; /*Centrere indholdet med flexbox*/
     justify-content: center; 
     align-items: center; 
@@ -96,8 +96,8 @@ body {
 
   /*Størrelse på 3D figur*/
   model-viewer {
-    width: 275%; /*Sætter figurens bredde på 270% af containeren - gør den derfor meget stor og skaber blikfang*/ 
-    height: 275%; /*Sætter figurens højde på 270% af containeren*/
+    width: 280%; /*Sætter figurens bredde på 270% af containeren - gør den derfor meget stor og skaber blikfang*/ 
+    height: 280%; /*Sætter figurens højde på 270% af containeren*/
     transform: translateY(40px); /*Flytter figuren lidt ned*/
     transition: all 2s ease; /*Gør overgangen for at få "bolden" til at flyve tilbage mere smooth*/
   }
