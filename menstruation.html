@@ -26,7 +26,46 @@
     
 
     <main>
+        
+    <div class="layout">
 
+        <div class="videoside">
+                <img src="/images/quizmens.png" alt="baggrundtilvideo" class="videobaggrund" />
+        </div>
+
+        <div class="quiz-wrapper">
+    
+            <img src="/images/quizmens.png" alt="quiz billede" class="quizbillede"/>
+
+                <div class="quiz-container">
+            
+                    <div class="question">
+                        <h2>1. Hvor lang er en gennemsnitlig menstruationscyklus?</h2>
+                        <button onclick="checkAnswer(this, true)">28 dage</button>
+                        <button onclick="checkAnswer(this, false)">15 dage</button>
+                        <button onclick="checkAnswer(this, false)">40 dage</button>
+                    </div>
+        
+                    <div class="question">
+                        <h2>2. Hvad er PMS?</h2>
+                        <button onclick="checkAnswer(this, true)">Præmenstruelt syndrom</button>
+                        <button onclick="checkAnswer(this, false)">Periode med stilhed</button>
+                        <button onclick="checkAnswer(this, false)">Permanent menstruation</button>
+                    </div>
+        
+                    <div class="question">
+                        <h2>3. Hvad sker der under menstruation?</h2>
+                        <button onclick="checkAnswer(this, true)">Livmoderslimhinden udskilles</button>
+                        <button onclick="checkAnswer(this, false)">Blod dannes i leveren</button>
+                        <button onclick="checkAnswer(this, false)">Ægget befrugtes</button>
+                    </div>
+                </div>
+
+        </div>
+    </div>
     </main>
+
+
+    <script src="js/menstruation.js"></script>
 </body>
 </html>
