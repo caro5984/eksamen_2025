@@ -40,7 +40,7 @@ h1 {
   font-family: var(--overskrift);/* Tekstens font */
   font-weight: var(--overskrift-tyk);/* Tykkelse på fonten */
   font-size: 400%; /* Tekst størrelse */
-  color: var(--blod); /* Teksten farve */
+  color: var(--rose); /* Teksten farve */
   text-transform: uppercase; /* Gør alle bogstver store */
   justify-self: center; /* Centrere teksten */
 }
