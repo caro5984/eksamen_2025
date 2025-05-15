@@ -27,4 +27,22 @@ h1{
     color: var(--støvet); /*Teksten farve*/
     text-transform: uppercase; /*Gør alle bogstver store*/
     justify-self: center; /*Centrere teksten*/
+    margin-top: -1%;
+}
+
+#infographic{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: auto;
+    margin-top: -3%;
+    margin-left: -10%;
+}
+
+#sommerfigur{
+    width: 10%;
+    height: auto;
+    display: flex;
+    justify-self: center;
+    margin-top: -10%;
 }
