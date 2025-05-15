@@ -1,8 +1,8 @@
-// Vælger hvilke sommerfugle der styles på siden, og tilføjer animation til dem))
+// Vælger hvilke blomster der styles på siden, og tilføjer animation til dem))
 document.addEventListener("DOMContentLoaded", () => {
   const blomster = document.querySelectorAll(".figur1,.figur3,.figur5,.figur7,.figur9,.figur11");
 
-  // laver rotation for hver sommerfugl))
+  // laver rotation for hver blomst))
   blomster.forEach((blomster) => {
     let angle = 1; // Startvinkel (i grader)
     let direction = 2; // Rotationsretning: 1 = med uret, -1 = mod uret
@@ -55,3 +55,5 @@ let currentIndex = 0;
     // Tilføj 'active' til det nye billede
     images[currentIndex].classList.add('active');
   }
+
+  

@@ -132,22 +132,26 @@ h1 {
 
 .indhold {
   display: flex;
+  position: relative;
+  min-height: 700px; /* Sørger for højde nok */
+  overflow: visible;  /* vigtig: så hånden ikke bliver klippet */
 }
 
 .tekst-billeder {
   position: relative;
-  width: 50%;           /* fx 90% af skærmbredden */
-  aspect-ratio: 574 / 652; /* bevarer billedets formforhold */
+  width: 50%;
+  aspect-ratio: 574 / 652;
   cursor: pointer;
   overflow: hidden;
   margin-top: -2%;
+  z-index: 1; /* så hånd kan være over */
 }
 
 .tekst-billeder img {
   position: absolute;
   top: 0;
   left: 10%;
-  width: 70%;          /* 70% af containerens bredde */
+  width: 70%;
   height: auto;
   object-fit: contain;
   opacity: 0;
@@ -162,8 +166,8 @@ h1 {
 
 .quiz-wrapper {
   position: relative;
-  width: 50%;           /* fx 70% af skærmbredden */
-  aspect-ratio: 574 / 652; /* bevarer billedets formforhold */
+  width: 50%;
+  aspect-ratio: 574 / 652;
   margin-top: -2%;
   display: flex;
   justify-content: center;
@@ -171,13 +175,42 @@ h1 {
 }
 
 .quiz-wrapper img {
+  width: 85%;
+  object-fit: contain;
   position: absolute;
   top: 0;
   left: 0;
-  width: 85%;          /* 40% af containerens bredde */
-  height: auto;
-  object-fit: contain;
   z-index: 0;
+}
+
+/* Hånden */
+.hand-pointer {
+  position: absolute;
+  top: 53%;
+  left: 36%;
+  width: 2%;
+  pointer-events: none;  /* Så den ikke blokerer klik */
+  opacity: 0.9;
+  animation: pressAnimation 2s infinite ease-in-out;
+  z-index: 10;  /* Højere end billederne */
+}
+
+/* Animation – hånd der peger og trykker */
+@keyframes pressAnimation {
+  0% {
+    transform: translateY(0);
+    opacity: 0.5;
+  }
+  30% {
+    transform: translateY(-10px);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0.5;
+  }
 }
 
 footer{
