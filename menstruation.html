@@ -20,7 +20,7 @@
 
     <header>
         <a href="index.html">
-            <img src="images/tilbage1.png" alt="Gå tilbage til forsiden" class="knap tilbage">
+            <img src="images/tilbage1.png" alt="Gå tilbage til forsiden" class="knap tilbage"/>
         </a>
 
         <h1>Menstruationsfasen</h1>
@@ -36,10 +36,11 @@
         <div class="videoside">
                 <img src="/images/video.png" alt="baggrundtilvideo" class="videobaggrund"/>
 
-                <video class="videooverlay" autoplay muted loop>
+                <video id="video" class="videooverlay">
                     <source src="/video/Menstrationsfasen.mp4" type="video/mp4">
-                    Din browser understøtter ikke video.
                 </video>
+
+                <img src="/images/playknap.png" alt="Play video" id="play-btn" class="play-button" />
         </div>
 
         <div class="quiz-wrapper">
@@ -77,6 +78,6 @@
     </main>
 
 
-    <script src="js/menstruation.js" defer></script>
+    <script src="js/menstruation.js" defer></script> <!--Den skal have defer, ellers kører scriptet før videoen er indlæst.-->
 </body>
 </html>
