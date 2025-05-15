@@ -21,16 +21,28 @@ body {
   overflow: hidden;
 }
 
+.knap {
+  position: absolute; /* Gør det muligt at placere knapperne i hjørnerne */
+  width: 5%; /* Knappernes størrelse */
+  height: auto; /* Knappernes størrelse */
+  display: block; /* Sørger for hele billedområdet er klikbart */
+  cursor: pointer; /* Gør musen til en pegende hånd ved hover */
+  z-index: 10; /* Sørger for at knapperne ligger over andre elementer */
+} 
 
-h1{
-    font-family: var(--overskrift);
-    font-weight: var(--overskrift-tyk);
-    font-size: 400%;
-    text-transform: uppercase;
-    display: flex;
-    justify-content: center;
-    color: var(--rose);
-    z-index: 1;
+/* Placering af knapper i hvert hjørne af skærmen */
+.tilbage { 
+  top: 20; 
+  left: 20; 
+}
+
+h1 {
+  font-family: var(--overskrift);/* Tekstens font */
+  font-weight: var(--overskrift-tyk);/* Tykkelse på fonten */
+  font-size: 400%; /* Tekst størrelse */
+  color: var(--blod); /* Teksten farve */
+  text-transform: uppercase; /* Gør alle bogstver store */
+  justify-self: center; /* Centrere teksten */
 }
 
 #baggrundsfigur{
