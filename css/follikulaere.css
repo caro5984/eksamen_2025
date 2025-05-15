@@ -38,6 +38,12 @@ body {
   z-index: 10; /* Sørger for at knapperne ligger over andre elementer */
 } 
 
+ /* Placering af knapper i hvert hjørne af skærmen */
+ .tilbage { 
+  top: 6%; 
+  left: 1%; 
+}
+
 h1 {
   font-family: var(--overskrift);/* Tekstens font */
   font-weight: var(--overskrift-tyk);/* Tykkelse på fonten */
@@ -45,6 +51,83 @@ h1 {
   color: var(--blod); /* Teksten farve */
   text-transform: uppercase; /* Gør alle bogstver store */
   justify-self: center; /* Centrere teksten */
+}
+
+.figur {
+  position: absolute;
+  width: 4%; 
+  z-index: -1; /* bag indhold */
+  pointer-events: none; /* så den ikke forstyrrer klik */
+  position: absolute;
+  transition: top 2s ease, left 2s ease; /* Glidende bevægelse */
+}
+
+.figur1 {
+  top: 20%; /* afstand til top*/
+  left: 47%; /*afstand til venstre*/
+  width: 3%; /*ændre på størrelse af figuren*/
+  transform: rotate(20deg); /* Roterer med uret */
+}
+
+.figur2 {
+  top: 35%;
+  left: 3%;
+  width: 3%; 
+  transform: rotate(100deg); 
+}
+
+.figur3 {
+  top: 85%;
+  left: 7%;
+  transform: rotate(60deg);
+}
+
+.figur4 {
+  top: 73%;
+  left: 60%;
+  transform: rotate(30deg);
+  width: 3%;
+}
+
+.figur5 {
+  top: 90%;
+  left: 35%;
+  width: 3%; 
+  transform: rotate(90deg);
+}
+
+.figur6 {
+  top: 13%;
+  left: 75%;
+  transform: rotate(20deg);
+}
+
+.figur7 {
+  top: 5%;
+  left: 15%;
+  transform: rotate(20deg);
+}
+
+.figur8 {
+  top: 5%;
+  left: 95%;
+  width: 3%; 
+}
+
+.figur9 {
+  top: 45%;
+  left: 37%;
+}
+
+.figur10 {
+  top: 80%;
+  left: 95%;  
+}
+
+.figur11 {
+  top: 40%;
+  left: 90%;
+  width: 3%; 
 }
 
 .indhold {
@@ -90,8 +173,8 @@ h1 {
 .quiz-wrapper img {
   position: absolute;
   top: 0;
-  left: 5%;
-  width: 70%;          /* 40% af containerens bredde */
+  left: 0;
+  width: 85%;          /* 40% af containerens bredde */
   height: auto;
   object-fit: contain;
   z-index: 0;
@@ -117,7 +200,7 @@ footer{
   height: auto;
   display: flex;
   padding-left: 55%;
-  margin-top: -14%;
+  margin-top: -10%;
 }
 
 .footer_tekst{
@@ -128,5 +211,5 @@ footer{
   text-align: center;
   display: flex;
   padding-left: 63%;
-  margin-top: -8.5%;
+  margin-top: -6.5%;
 }
