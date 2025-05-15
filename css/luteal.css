@@ -52,14 +52,19 @@ h1 {
   justify-self: center; /* Centrere teksten */
 }
 
-p{
-  font-family: var(--brodtekst);
-  color: var(--hvid);
+.indhold{
+  display: flex;
+  justify-content: space-evenly;
 }
 
-.information{
-  display: flex;
+.blob1{
+  width: 50%;
+  height: auto;
+}
 
+.quizbillede{
+  width: 150%;
+  height: auto;
 }
 
 .figur {
