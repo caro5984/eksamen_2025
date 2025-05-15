@@ -9,11 +9,9 @@
     --lilla: #200728;
 
       /* Fonte */
-    --brodtekst: 'lato', sans-serif;
-    --brodtekst-tynd: 300;
-    --brodtekst-regular: 300;
-    --overskrift: 'poppins', sans-serif;
-    --overskrift-tyk: 900;
+      --brodtekst: 'lato', sans-serif;
+      --overskrift: 'poppins', sans-serif;
+      --overskrift-tyk: 900;
 }
 
 body {
@@ -43,53 +41,58 @@ h1{
     width: 4%; 
     z-index: -1; /* bag indhold */
     pointer-events: none; /* så den ikke forstyrrer klik */
+    position: absolute;
+    transition: top 2s ease, left 2s ease; /* Glidende bevægelse */
   }
 
-.figur1 {
-    top: 8%;
+  .figur1 {
+    top: 10%;
     left: 37%;
-    transform: rotate(90deg); /* Roterer med uret */
+    width: 3%;
+    transform: rotate(20deg); /* Roterer med uret */
   }
   
   .figur2 {
     top: 30%;
     left: 1%;
-    transform: rotate(210deg); /* Roterer med uret */
+    transform: rotate(100deg); /* Roterer med uret */
   }
   
   .figur3 {
     top: 90%;
     left: 3%;
-    width: 6%; /*Ændre på nogle af størrelserne så der er forskel*/
+    width: 3%; /*Ændre på nogle af størrelserne så der er forskel*/
+    transform: rotate(60deg);
   }
   
   .figur4 {
     top: 70%;
     left: 50%;
-    transform: rotate(90deg); /* Roterer med uret */
+    transform: rotate(30deg); /* Roterer med uret */
   }
   
   .figur5 {
     top: 87%;
     left: 30%;
     transform: rotate(90deg); /* Roterer med uret */
-    width: 2.5%; /*Ændre på nogle af størrelserne så der er forskel*/
+    width: 1%; /*Ændre på nogle af størrelserne så der er forskel*/
   }
   
   .figur6 {
-    top: 20%;
+    top: 10%;
     left: 70%;
-    transform: rotate(90deg); /* Roterer med uret */
+    transform: rotate(20deg); /* Roterer med uret */
   }
   
   .figur7 {
-    top: 30%;
-    left: 50%;
+    top: 5%;
+    left: 5%;
+    transform: rotate(20deg); /* Roterer med uret */
   }
   
   .figur8 {
-    top: 30%;
-    left: 50%;
+    top: 5%;
+    left: 95%;
   }
   
   .figur9 {

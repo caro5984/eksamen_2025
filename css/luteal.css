@@ -10,10 +10,17 @@
 
       /* Fonte */
     --brodtekst: 'lato', sans-serif;
-    --brodtekst-tynd: 300;
-    --brodtekst-regular: 300;
     --overskrift: 'poppins', sans-serif;
     --overskrift-tyk: 900;
+}
+
+html, body {
+  margin: 0; /* Fjerner standard margin */
+  padding: 0; /* Fjerner standard padding */
+  width: 100%; /* Gør elementet 100% af viewportens bredde */
+  height: 100%; /* Gør elementet 100% af viewportens højde */
+  overflow: hidden; /* Forhindrer både vandret og lodret scroll */
+  touch-action: none; /* Forhindrer swipe, pinch-zoom og anden touch-adfærd på touch-skærme */
 }
 
 body {
@@ -45,10 +52,13 @@ h1 {
   justify-self: center; /* Centrere teksten */
 }
 
-#baggrundsfigur{
-    width: 40%;
-    height: auto;
-    padding-left: 5%;
+p{
+  font-family: var(--brodtekst);
+  color: var(--hvid);
+}
+
+.information{
+  display: flex;
 }
 
 .figur {
@@ -110,10 +120,17 @@ h1 {
 }
 
 .figur9 {
-  top: 90%;
+  top: 93%;
   left: 80%;
   transform: rotate(85deg); /* Roterer med uret */
   width: 2.7%; /*Ændre på nogle af størrelserne så der er forskel*/
+}
+
+footer{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
 }
 
 #efteraarsfigur{
@@ -121,5 +138,24 @@ h1 {
   height: auto;
   display: flex;
   justify-self: center;
-  margin-top: -5%;
+  margin-top: -11%;
+}
+
+#talebobbel{
+  width: 35%;
+  height: auto;
+  display: flex;
+  padding-left: 55%;
+  margin-top: -14%;
+}
+
+.footer_tekst{
+  font-family: var(--overskrift);
+  font-weight: var(--overskrift-tyk);
+  font-size: 87%;
+  color: var(--stovet);
+  text-align: center;
+  display: flex;
+  padding-left: 63%;
+  margin-top: -8.5%;
 }
