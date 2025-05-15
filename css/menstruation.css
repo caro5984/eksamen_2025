@@ -60,7 +60,82 @@ h1{
   }
 
 
-
+  .figur {
+    position: absolute;
+    width: 4%; 
+    z-index: -1; /* bag indhold */
+    pointer-events: none; /* så den ikke forstyrrer klik */
+    position: absolute;
+    transition: top 2s ease, left 2s ease; /* Glidende bevægelse */
+  }
+  
+  .figur1 {
+    top: 20%; /* afstand til top*/
+    left: 47%; /*afstand til venstre*/
+    width: 3%; /*ændre på størrelse af figuren*/
+    transform: rotate(20deg); /* Roterer med uret */
+  }
+  
+  .figur2 {
+    top: 35%;
+    left: 3%;
+    width: 3%; 
+    transform: rotate(100deg); 
+  }
+  
+  .figur3 {
+    top: 85%;
+    left: 7%;
+    transform: rotate(60deg);
+  }
+  
+  .figur4 {
+    top: 73%;
+    left: 60%;
+    transform: rotate(30deg);
+    width: 3%;
+  }
+  
+  .figur5 {
+    top: 90%;
+    left: 35%;
+    width: 3%; 
+    transform: rotate(90deg);
+  }
+  
+  .figur6 {
+    top: 13%;
+    left: 75%;
+    transform: rotate(20deg);
+  }
+  
+  .figur7 {
+    top: 5%;
+    left: 15%;
+    transform: rotate(20deg);
+  }
+  
+  .figur8 {
+    top: 5%;
+    left: 95%;
+    width: 3%; 
+  }
+  
+  .figur9 {
+    top: 45%;
+    left: 37%;
+  }
+  
+  .figur10 {
+    top: 80%;
+    left: 95%;  
+  }
+  
+  .figur11 {
+    top: 40%;
+    left: 91%;
+    width: 3%; 
+  }
 
   /* flexer video og quiz */
   .layout {
@@ -258,3 +333,41 @@ h1{
   .play-button:hover {
    cursor: pointer;
   }
+
+  .footer {
+    display: flex;
+    align-items: flex-end;
+    gap: 1rem;
+    position: relative;
+    margin-left: 2rem;
+  }
+  
+  #vinterfigur {
+    width: 10%;
+    height: auto;
+    margin-left: 40%;
+  }
+  
+  #talebobbel {
+    width: 45%;
+    height: auto;
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    z-index: -1;
+  }
+  
+  .footer_tekst {
+    position: absolute;
+    bottom: 72px;
+    padding-left: 63%;
+    margin-top: -6.3%;
+    font-family: var(--overskrift);
+    font-weight: var(--overskrift-tyk);
+    font-size: 87%;
+    color: var(--stovet);
+    text-align: center;
+   
+  }
+
+  
