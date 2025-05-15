@@ -78,7 +78,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
   
-  
   function resetQuiz() {
     const allButtons = document.querySelectorAll('.question button');
   
