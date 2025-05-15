@@ -59,7 +59,7 @@ p{
 
 .information{
   display: flex;
-  
+
 }
 
 .figur {
@@ -153,10 +153,10 @@ footer{
 .footer_tekst{
   font-family: var(--overskrift);
   font-weight: var(--overskrift-tyk);
-  font-size: 87%;
+  font-size: 85%;
   color: var(--stovet);
   text-align: center;
   display: flex;
   padding-left: 63%;
-  margin-top: -8.5%;
+  margin-top: -10%;
 }
