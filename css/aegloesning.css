@@ -135,9 +135,9 @@ h1{
     font-family: var(--overskrift);
     font-weight: var(--overskrift-tyk);
     font-size: 87%;
-    color: var(--stovet);
+    color: var(--støvet);
     text-align: center;
     display: flex;
-    padding-left: 63%;
-    margin-top: -8.5%;
+    padding-left: 65%;
+    margin-top: -7.5%;
   }
