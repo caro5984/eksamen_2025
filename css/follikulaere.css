@@ -16,6 +16,15 @@
     --overskrift-tyk: 900;
 }
 
+html, body {
+  margin: 0; /* Fjerner standard margin */
+  padding: 0; /* Fjerner standard padding */
+  width: 100%; /* Gør elementet 100% af viewportens bredde */
+  height: 100%; /* Gør elementet 100% af viewportens højde */
+  overflow: hidden; /* Forhindrer både vandret og lodret scroll */
+  touch-action: none; /* Forhindrer swipe, pinch-zoom og anden touch-adfærd på touch-skærme */
+}
+
 body {
   background-color: var(--rose);
 }
@@ -29,12 +38,6 @@ body {
   z-index: 10; /* Sørger for at knapperne ligger over andre elementer */
 } 
 
-/* Placering af knapper i hvert hjørne af skærmen */
-.tilbage { 
-  top: 20; 
-  left: 20; 
-}
-
 h1 {
   font-family: var(--overskrift);/* Tekstens font */
   font-weight: var(--overskrift-tyk);/* Tykkelse på fonten */
@@ -42,4 +45,31 @@ h1 {
   color: var(--blod); /* Teksten farve */
   text-transform: uppercase; /* Gør alle bogstver store */
   justify-self: center; /* Centrere teksten */
+}
+
+.tekst-billeder {
+  position: relative;
+  width: 90%;           /* fx 90% af skærmbredden */
+  aspect-ratio: 574 / 652; /* bevarer billedets formforhold */
+  cursor: pointer;
+  overflow: hidden;
+  margin-left: 5%;       /* svarer til left: 5% fra før */
+  margin-top: -2%;
+}
+
+.tekst-billeder img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40%;          /* 40% af containerens bredde */
+  height: auto;
+  object-fit: contain;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  z-index: 0;
+}
+
+.tekst-billeder img.active {
+  opacity: 1;
+  z-index: 1;
 }
