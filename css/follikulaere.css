@@ -38,6 +38,12 @@ body {
   z-index: 10; /* Sørger for at knapperne ligger over andre elementer */
 } 
 
+ /* Placering af knapper i hvert hjørne af skærmen */
+ .tilbage { 
+  top: 6%; 
+  left: 1%; 
+}
+
 h1 {
   font-family: var(--overskrift);/* Tekstens font */
   font-weight: var(--overskrift-tyk);/* Tykkelse på fonten */
@@ -47,24 +53,105 @@ h1 {
   justify-self: center; /* Centrere teksten */
 }
 
+.figur {
+  position: absolute;
+  width: 4%; 
+  z-index: -1; /* bag indhold */
+  pointer-events: none; /* så den ikke forstyrrer klik */
+  position: absolute;
+  transition: top 2s ease, left 2s ease; /* Glidende bevægelse */
+}
+
+.figur1 {
+  top: 20%; /* afstand til top*/
+  left: 47%; /*afstand til venstre*/
+  width: 3%; /*ændre på størrelse af figuren*/
+  transform: rotate(20deg); /* Roterer med uret */
+}
+
+.figur2 {
+  top: 35%;
+  left: 3%;
+  width: 3%; 
+  transform: rotate(100deg); 
+}
+
+.figur3 {
+  top: 85%;
+  left: 7%;
+  transform: rotate(60deg);
+}
+
+.figur4 {
+  top: 73%;
+  left: 60%;
+  transform: rotate(30deg);
+  width: 3%;
+}
+
+.figur5 {
+  top: 90%;
+  left: 35%;
+  width: 3%; 
+  transform: rotate(90deg);
+}
+
+.figur6 {
+  top: 13%;
+  left: 75%;
+  transform: rotate(20deg);
+}
+
+.figur7 {
+  top: 5%;
+  left: 15%;
+  transform: rotate(20deg);
+}
+
+.figur8 {
+  top: 5%;
+  left: 95%;
+  width: 3%; 
+}
+
+.figur9 {
+  top: 45%;
+  left: 37%;
+}
+
+.figur10 {
+  top: 80%;
+  left: 95%;  
+}
+
+.figur11 {
+  top: 40%;
+  left: 90%;
+  width: 3%; 
+}
+
 .indhold {
   display: flex;
+  position: relative;
+  min-height: 700px; /* Sørger for højde nok */
+  overflow: visible;  /* vigtig: så hånden ikke bliver klippet */
 }
 
 .tekst-billeder {
   position: relative;
-  width: 50%;           /* fx 90% af skærmbredden */
-  aspect-ratio: 574 / 652; /* bevarer billedets formforhold */
+  width: 50%;
+  aspect-ratio: 574 / 652;
   cursor: pointer;
   overflow: hidden;
   margin-top: -2%;
+  z-index: 1; /* så hånd kan være over */
 }
 
 .tekst-billeder img {
   position: absolute;
   top: 0;
   left: 10%;
-  width: 70%;          /* 70% af containerens bredde */
+  width: 70%;
   height: auto;
   object-fit: contain;
   opacity: 0;
@@ -79,8 +166,8 @@ h1 {
 
 .quiz-wrapper {
   position: relative;
-  width: 50%;           /* fx 70% af skærmbredden */
-  aspect-ratio: 574 / 652; /* bevarer billedets formforhold */
+  width: 50%;
+  aspect-ratio: 574 / 652;
   margin-top: -2%;
   display: flex;
   justify-content: center;
@@ -88,13 +175,42 @@ h1 {
 }
 
 .quiz-wrapper img {
+  width: 85%;
+  object-fit: contain;
   position: absolute;
   top: 0;
-  left: 5%;
-  width: 70%;          /* 40% af containerens bredde */
-  height: auto;
-  object-fit: contain;
+  left: 0;
   z-index: 0;
+}
+
+/* Hånden */
+.hand-pointer {
+  position: absolute;
+  top: 53%;
+  left: 36%;
+  width: 2%;
+  pointer-events: none;  /* Så den ikke blokerer klik */
+  opacity: 0.9;
+  animation: pressAnimation 2s infinite ease-in-out;
+  z-index: 10;  /* Højere end billederne */
+}
+
+/* Animation – hånd der peger og trykker */
+@keyframes pressAnimation {
+  0% {
+    transform: translateY(0);
+    opacity: 0.5;
+  }
+  30% {
+    transform: translateY(-10px);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0.5;
+  }
 }
 
 footer{
@@ -117,7 +233,7 @@ footer{
   height: auto;
   display: flex;
   padding-left: 55%;
-  margin-top: -14%;
+  margin-top: -10%;
 }
 
 .footer_tekst{
@@ -128,5 +244,5 @@ footer{
   text-align: center;
   display: flex;
   padding-left: 63%;
-  margin-top: -8.5%;
+  margin-top: -6.5%;
 }
