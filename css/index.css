@@ -9,11 +9,9 @@
     --lilla: #200728;
 
       /* Fonte */
-    --brodtekst: 'lato', sans-serif;
-    --brodtekst-tynd: 300;
-    --brodtekst-regular: 300;
-    --overskrift: 'poppins', sans-serif;
-    --overskrift-tyk: 900;
+      --brodtekst: 'lato', sans-serif;
+      --overskrift: 'poppins', sans-serif;
+      --overskrift-tyk: 900;
 }
 
 html, body {
@@ -88,7 +86,7 @@ body {
 
 /*3D FIGUR*/
   .parallax-section {
-    height: 47vh; /*Sektionen fylder 50% af højden*/
+    height: 49vh; /*Sektionen fylder 50% af højden*/
     display: flex; /*Centrere indholdet med flexbox*/
     justify-content: center; 
     align-items: center; 
@@ -98,10 +96,44 @@ body {
 
   /*Størrelse på 3D figur*/
   model-viewer {
-    width: 275%; /*Sætter figurens bredde på 270% af containeren - gør den derfor meget stor og skaber blikfang*/ 
-    height: 275%; /*Sætter figurens højde på 270% af containeren*/
+    width: 280%; /*Sætter figurens bredde på 270% af containeren - gør den derfor meget stor og skaber blikfang*/ 
+    height: 280%; /*Sætter figurens højde på 270% af containeren*/
     transform: translateY(40px); /*Flytter figuren lidt ned*/
     transition: all 2s ease; /*Gør overgangen for at få "bolden" til at flyve tilbage mere smooth*/
+  }
+
+  footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+  
+  #figur{
+    width: 7%;
+    height: auto;
+    display: flex;
+    margin-left: 35%;
+    margin-top: -11%;
+  }
+  
+  #talebobbel{
+    width: 32%;
+    height: auto;
+    display: flex;
+    padding-left: 45%;
+    margin-top: -11%;
+  }
+  
+  .footer_tekst{
+    font-family: var(--overskrift);
+    font-weight: var(--overskrift-tyk);
+    font-size: 75%;
+    color: var(--stovet);
+    text-align: center;
+    display: flex;
+    padding-left: 52%;
+    margin-top: -8.5%;
   }
 
  
