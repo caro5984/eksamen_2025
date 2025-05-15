@@ -47,7 +47,7 @@ h1 {
   justify-self: center; /* Centrere teksten */
 }
 
-main {
+.indhold {
   display: flex;
 }
 
@@ -63,8 +63,8 @@ main {
 .tekst-billeder img {
   position: absolute;
   top: 0;
-  left: 0;
-  width: 70%;          /* 40% af containerens bredde */
+  left: 10%;
+  width: 70%;          /* 70% af containerens bredde */
   height: auto;
   object-fit: contain;
   opacity: 0;
@@ -79,7 +79,7 @@ main {
 
 .quiz-wrapper {
   position: relative;
-  width: 50%;           /* fx 90% af skærmbredden */
+  width: 50%;           /* fx 70% af skærmbredden */
   aspect-ratio: 574 / 652; /* bevarer billedets formforhold */
   margin-top: -2%;
   display: flex;
@@ -90,9 +90,43 @@ main {
 .quiz-wrapper img {
   position: absolute;
   top: 0;
-  left: 0;
+  left: 5%;
   width: 70%;          /* 40% af containerens bredde */
   height: auto;
   object-fit: contain;
   z-index: 0;
+}
+
+footer{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+#foraarsfigur{
+  width: 10%;
+  height: auto;
+  display: flex;
+  justify-self: center;
+  margin-top: -11%;
+}
+
+#talebobbel{
+  width: 35%;
+  height: auto;
+  display: flex;
+  padding-left: 55%;
+  margin-top: -14%;
+}
+
+.footer_tekst{
+  font-family: var(--overskrift);
+  font-weight: var(--overskrift-tyk);
+  font-size: 87%;
+  color: var(--stovet);
+  text-align: center;
+  display: flex;
+  padding-left: 63%;
+  margin-top: -8.5%;
 }
