@@ -18,6 +18,21 @@ body {
   background-color: var(--hvid); /*Baggrundsfarven*/
 }
 
+.knap {
+    position: absolute; /* Gør det muligt at placere knapperne i hjørnerne */
+    width: 5%; /* Knappernes størrelse */
+    height: auto; /* Knappernes størrelse */
+    display: block; /* Sørger for hele billedområdet er klikbart */
+    cursor: pointer; /* Gør musen til en pegende hånd ved hover */
+    z-index: 10; /* Sørger for at knapperne ligger over andre elementer */
+  } 
+  
+  /* Placering af knapper i hvert hjørne af skærmen */
+  .tilbage { 
+    top: 2%; 
+    left: 20; 
+  }
+
 h1{
     font-family: var(--overskrift);/*Tekstens font */
     font-weight: var(--overskrift-tyk);/*Tykkelse på fonten */
@@ -46,48 +61,48 @@ h1{
   }
 
   .figur1 {
-    top: 10%;
-    left: 37%;
-    width: 3%;
+    top: 10%; /* afstand til top*/
+    left: 37%; /*afstand til venstre*/
+    width: 3%; /*ændre på størrelse af figuren*/
     transform: rotate(20deg); /* Roterer med uret */
   }
   
   .figur2 {
     top: 30%;
     left: 1%;
-    transform: rotate(100deg); /* Roterer med uret */
+    transform: rotate(100deg); 
   }
   
   .figur3 {
     top: 90%;
     left: 3%;
-    width: 3%; /*Ændre på nogle af størrelserne så der er forskel*/
+    width: 3%; 
     transform: rotate(60deg);
   }
   
   .figur4 {
     top: 70%;
     left: 50%;
-    transform: rotate(30deg); /* Roterer med uret */
+    transform: rotate(30deg); 
   }
   
   .figur5 {
     top: 87%;
     left: 30%;
-    transform: rotate(90deg); /* Roterer med uret */
-    width: 1%; /*Ændre på nogle af størrelserne så der er forskel*/
+    transform: rotate(90deg); 
+    width: 1%; 
   }
   
   .figur6 {
     top: 10%;
     left: 70%;
-    transform: rotate(20deg); /* Roterer med uret */
+    transform: rotate(20deg); 
   }
   
   .figur7 {
     top: 5%;
-    left: 5%;
-    transform: rotate(20deg); /* Roterer med uret */
+    left: 15%;
+    transform: rotate(20deg); 
   }
   
   .figur8 {
