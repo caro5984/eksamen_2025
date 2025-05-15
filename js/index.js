@@ -23,8 +23,6 @@ modelViewer.addEventListener('camera-change', () => {
 });
 
 /** Får knapperne på forsiden til at flyde over siden som en glidende overgang til den næste side, med et overlay i knappens farve */
-
-
 //knapperne på forsiden
 const links = document.querySelectorAll('a[href$=".html"]');
 const overlay = document.getElementById('transitionOverlay');

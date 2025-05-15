@@ -38,6 +38,69 @@ h1{
     margin-top: -3%;
     margin-left: -10%;
 }
+.figur {
+    position: absolute;
+    width: 4%; 
+    z-index: -1; /* bag indhold */
+    pointer-events: none; /* så den ikke forstyrrer klik */
+    position: absolute;
+    transition: top 2s ease, left 2s ease; /* Glidende bevægelse */
+  }
+
+  .figur1 {
+    top: 10%;
+    left: 37%;
+    width: 3%;
+    transform: rotate(20deg); /* Roterer med uret */
+  }
+  
+  .figur2 {
+    top: 30%;
+    left: 1%;
+    transform: rotate(100deg); /* Roterer med uret */
+  }
+  
+  .figur3 {
+    top: 90%;
+    left: 3%;
+    width: 3%; /*Ændre på nogle af størrelserne så der er forskel*/
+    transform: rotate(60deg);
+  }
+  
+  .figur4 {
+    top: 70%;
+    left: 50%;
+    transform: rotate(30deg); /* Roterer med uret */
+  }
+  
+  .figur5 {
+    top: 87%;
+    left: 30%;
+    transform: rotate(90deg); /* Roterer med uret */
+    width: 1%; /*Ændre på nogle af størrelserne så der er forskel*/
+  }
+  
+  .figur6 {
+    top: 10%;
+    left: 70%;
+    transform: rotate(20deg); /* Roterer med uret */
+  }
+  
+  .figur7 {
+    top: 5%;
+    left: 5%;
+    transform: rotate(20deg); /* Roterer med uret */
+  }
+  
+  .figur8 {
+    top: 5%;
+    left: 95%;
+  }
+  
+  .figur9 {
+    top: 30%;
+    left: 50%;
+  }
 
 #sommerfigur{
     width: 10%;

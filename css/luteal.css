@@ -10,10 +10,17 @@
 
       /* Fonte */
     --brodtekst: 'lato', sans-serif;
-    --brodtekst-tynd: 300;
-    --brodtekst-regular: 300;
     --overskrift: 'poppins', sans-serif;
     --overskrift-tyk: 900;
+}
+
+html, body {
+  margin: 0; /* Fjerner standard margin */
+  padding: 0; /* Fjerner standard padding */
+  width: 100%; /* Gør elementet 100% af viewportens bredde */
+  height: 100%; /* Gør elementet 100% af viewportens højde */
+  overflow: hidden; /* Forhindrer både vandret og lodret scroll */
+  touch-action: none; /* Forhindrer swipe, pinch-zoom og anden touch-adfærd på touch-skærme */
 }
 
 body {
@@ -40,21 +47,36 @@ h1 {
   font-family: var(--overskrift);/* Tekstens font */
   font-weight: var(--overskrift-tyk);/* Tykkelse på fonten */
   font-size: 400%; /* Tekst størrelse */
-  color: var(--rose); /* Teksten farve */
+  color: var(--hvid); /* Teksten farve */
   text-transform: uppercase; /* Gør alle bogstver store */
   justify-self: center; /* Centrere teksten */
+}
+
+p{
+  font-family: var(--brodtekst);
+  color: var(--hvid);
 }
 
 #baggrundsfigur{
     width: 40%;
     height: auto;
-    margin: 2%;
+    margin-left: 5%;
+}
+
+.tekst1{
+  display: flex;
+  padding-left: 10%;
+}
+
+#sur{
+  width: auto;
+  height: 2%;
 }
 
 .figur {
   position: absolute;
-  width: 60px; 
-  z-index: 0; /* bag indhold */
+  width: 4%; 
+  z-index: -1; /* bag indhold */
   pointer-events: none; /* så den ikke forstyrrer klik */
 }
 
@@ -66,41 +88,86 @@ h1 {
 
 .figur2 {
   top: 30%;
-  left: 50%;
+  left: 1%;
   transform: rotate(210deg); /* Roterer med uret */
 }
 
 .figur3 {
-  top: 30%;
-  left: 50%;
+  top: 90%;
+  left: 3%;
+  width: 6%; /*Ændre på nogle af størrelserne så der er forskel*/
 }
 
 .figur4 {
-  top: 30%;
+  top: 70%;
   left: 50%;
+  transform: rotate(90deg); /* Roterer med uret */
 }
 
 .figur5 {
-  top: 30%;
-  left: 50%;
+  top: 87%;
+  left: 30%;
+  transform: rotate(90deg); /* Roterer med uret */
+  width: 2.5%; /*Ændre på nogle af størrelserne så der er forskel*/
 }
 
 .figur6 {
-  top: 30%;
-  left: 50%;
+  top: 20%;
+  left: 70%;
+  transform: rotate(90deg); /* Roterer med uret */
 }
 
 .figur7 {
-  top: 30%;
-  left: 50%;
+  top: 18%;
+  left: 90%;
+  transform: rotate(85deg); /* Roterer med uret */
+  width: 2.7%; /*Ændre på nogle af størrelserne så der er forskel*/
 }
 
 .figur8 {
-  top: 30%;
-  left: 50%;
+  top: 50%;
+  left: 95%;
+  transform: rotate(320deg); /* Roterer med uret */
+  width: 2.7%; /*Ændre på nogle af størrelserne så der er forskel*/
 }
 
 .figur9 {
-  top: 30%;
-  left: 50%;
+  top: 93%;
+  left: 80%;
+  transform: rotate(85deg); /* Roterer med uret */
+  width: 2.7%; /*Ændre på nogle af størrelserne så der er forskel*/
+}
+
+footer{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+#efteraarsfigur{
+  width: 10%;
+  height: auto;
+  display: flex;
+  justify-self: center;
+  margin-top: -11%;
+}
+
+#talebobbel{
+  width: 35%;
+  height: auto;
+  display: flex;
+  padding-left: 55%;
+  margin-top: -14%;
+}
+
+.footer_tekst{
+  font-family: var(--overskrift);
+  font-weight: var(--overskrift-tyk);
+  font-size: 87%;
+  color: var(--stovet);
+  text-align: center;
+  display: flex;
+  padding-left: 63%;
+  margin-top: -8.5%;
 }
