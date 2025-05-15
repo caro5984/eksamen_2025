@@ -44,7 +44,7 @@ function checkAnswer(button, isCorrect) {
     if (allAnswered) {
       const resetBtn = document.getElementById('reset-btn');
       resetBtn.style.display = 'block';
-      resetBtn.textContent = allCorrect ? 'Tillykke!' : 'Prøv igen';
+      resetBtn.textContent = allCorrect ? 'Flot klaret!' : 'Prøv igen';
     }
   }
 

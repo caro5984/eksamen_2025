@@ -118,11 +118,11 @@ body {
   }
   
   #talebobbel{
-    width: 32%;
+    width: 35%;
     height: auto;
     display: flex;
     padding-left: 45%;
-    margin-top: -11%;
+    margin-top: -8%;
   }
   
   .footer_tekst{
@@ -133,7 +133,5 @@ body {
     text-align: center;
     display: flex;
     padding-left: 52%;
-    margin-top: -6.3%;
+    margin-top: -6.5%;
   }
-
- 

@@ -25,15 +25,38 @@
     </header>
 
     <main>
-        <section class="indhold">
-            <section class="tekst1">
-                <img src="images/luteal_info_figur.png" class="blob1">
-            </section>
-        
-            <section class="quiz-wrapper">
+        <div class="layout">
+
+            <img src="images/ÆGGE infographic.png" alt="ægløsning infographic" id="infographic">
+    
+            <div class="quiz-wrapper">
                 <img src="/images/quiz blob 2.png" alt="quiz billede" class="quizbillede"/>
-            </section>
-        </section>
+                    <div class="quiz-container">
+                        <div class="question">
+                            <h2>1. Hvor mange æg udskiller piger/kvinder ved ægløsning?</h2>
+                            <button onclick="checkAnswer(this, true)">1 æg</button>
+                            <button onclick="checkAnswer(this, false)">2 æg</button>
+                            <button onclick="checkAnswer(this, false)">3 æg</button>
+                        </div>
+            
+                        <div class="question">
+                            <h2>2. Hvad kaldes den "sovepose" som ægget ligger i?</h2>
+                            <button onclick="checkAnswer(this, false)">æg hinde</button>
+                            <button onclick="checkAnswer(this, true)">follikel</button>
+                            <button onclick="checkAnswer(this, false)">pube</button>
+                        </div>
+            
+                        <div class="question">
+                            <h2>3. Hvor længe er ægget i live efter ægløsningen?</h2>
+                            <button onclick="checkAnswer(this, true)">12-24 timer</button>
+                            <button onclick="checkAnswer(this, false)">0-12 timer</button>
+                            <button onclick="checkAnswer(this, false)">24-42 timer</button>
+                        </div>
+    
+                        <button id="reset-btn" onclick="resetQuiz()" style="display: none;">Prøv igen</button>
+                    </div>  
+            </div>
+        </div>
 
         <div class="blade">
             <img src="images/blad1.png" alt="Blad" class="figur figur1">
