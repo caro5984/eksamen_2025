@@ -47,13 +47,16 @@ h1 {
   justify-self: center; /* Centrere teksten */
 }
 
+main {
+  display: flex;
+}
+
 .tekst-billeder {
   position: relative;
-  width: 90%;           /* fx 90% af skærmbredden */
+  width: 50%;           /* fx 90% af skærmbredden */
   aspect-ratio: 574 / 652; /* bevarer billedets formforhold */
   cursor: pointer;
   overflow: hidden;
-  margin-left: 5%;       /* svarer til left: 5% fra før */
   margin-top: -2%;
 }
 
@@ -61,7 +64,7 @@ h1 {
   position: absolute;
   top: 0;
   left: 0;
-  width: 40%;          /* 40% af containerens bredde */
+  width: 70%;          /* 40% af containerens bredde */
   height: auto;
   object-fit: contain;
   opacity: 0;
@@ -72,4 +75,24 @@ h1 {
 .tekst-billeder img.active {
   opacity: 1;
   z-index: 1;
+}
+
+.quiz-wrapper {
+  position: relative;
+  width: 50%;           /* fx 90% af skærmbredden */
+  aspect-ratio: 574 / 652; /* bevarer billedets formforhold */
+  margin-top: -2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.quiz-wrapper img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 70%;          /* 40% af containerens bredde */
+  height: auto;
+  object-fit: contain;
+  z-index: 0;
 }
