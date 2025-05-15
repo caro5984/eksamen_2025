@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const sommerfugle = document.querySelectorAll(".figur1,.figur3,.figur5,.figur7,.figur9");
 
   // laver rotation for hver sommerfugl))
-  sommerfugle.forEach((fugl) => {
+  sommerfugle.forEach((sommerfugl) => {
     let angle = 1; // Startvinkel (i grader)
     let direction = 2; // Rotationsretning: 1 = med uret, -1 = mod uret
 
@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
         direction *= -1; // Skift retning
       }
 
-      fugl.style.transform = `rotate(${angle}deg)`;
+      sommerfugl.style.transform = `rotate(${angle}deg)`;
     }, 150); // intervallet bestemmer hvor hurtigt de vipper. (jo lavere tal, jo hurtigere)
   });
 });
@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("DOMContentLoaded", () => {
   const sommerfugle = document.querySelectorAll(".figur2,.figur4,.figur6,.figur8");
 
-  sommerfugle.forEach((fugl) => {
+  sommerfugle.forEach((sommerfugl) => {
     let angle = 1;
     let direction = 2;
 
@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
         direction *= -1;
       }
 
-      fugl.style.transform = `rotate(${angle}deg)`;
+      sommerfugl.style.transform = `rotate(${angle}deg)`;
     }, 150); 
   });
 });
