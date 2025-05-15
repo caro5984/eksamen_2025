@@ -153,10 +153,10 @@ footer{
 .footer_tekst{
   font-family: var(--overskrift);
   font-weight: var(--overskrift-tyk);
-  font-size: 85%;
+  font-size: 72%;
   color: var(--stovet);
   text-align: center;
   display: flex;
   padding-left: 63%;
-  margin-top: -10%;
+  margin-top: -6.3%;
 }

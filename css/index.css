@@ -128,12 +128,12 @@ body {
   .footer_tekst{
     font-family: var(--overskrift);
     font-weight: var(--overskrift-tyk);
-    font-size: 75%;
+    font-size: 69%;
     color: var(--stovet);
     text-align: center;
     display: flex;
     padding-left: 52%;
-    margin-top: -8.5%;
+    margin-top: -6.3%;
   }
 
  
