@@ -9,11 +9,9 @@
     --lilla: #200728;
 
       /* Fonte */
-    --brodtekst: 'lato', sans-serif;
-    --brodtekst-tynd: 300;
-    --brodtekst-regular: 300;
-    --overskrift: 'poppins', sans-serif;
-    --overskrift-tyk: 900;
+      --brodtekst: 'lato', sans-serif;
+      --overskrift: 'poppins', sans-serif;
+      --overskrift-tyk: 900;
 }
 
 body {

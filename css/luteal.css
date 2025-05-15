@@ -57,20 +57,8 @@ p{
   color: var(--hvid);
 }
 
-#baggrundsfigur{
-    width: 40%;
-    height: auto;
-    margin-left: 5%;
-}
-
-.tekst1{
+.information{
   display: flex;
-  padding-left: 10%;
-}
-
-#sur{
-  width: auto;
-  height: 2%;
 }
 
 .figur {
