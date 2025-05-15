@@ -43,10 +43,25 @@ h1 {
   justify-self: center; /* Centrere teksten */
 }
 
+p{
+  font-family: var(--brodtekst);
+  color: var(--hvid);
+}
+
 #baggrundsfigur{
     width: 40%;
     height: auto;
-    padding-left: 5%;
+    margin-left: 5%;
+}
+
+.tekst1{
+  display: flex;
+  padding-left: 10%;
+}
+
+#sur{
+  width: auto;
+  height: 2%;
 }
 
 .figur {
