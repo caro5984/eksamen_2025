@@ -40,7 +40,6 @@ h1{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
   }
   
 
@@ -52,9 +51,8 @@ h1{
 
   /* Venstre side */
 .videoside {
-    width: 66.66%;
-    height: 100%;
-    background-color: #ddd; /* fallback-farve */
+    width: 50%;
+    height: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -70,7 +68,7 @@ h1{
 
   .quiz-wrapper {
     position: relative;
-    width: 45%;
+    width: 100%;
     height: 45%;
     display: flex;
     justify-content: center;
@@ -100,16 +98,19 @@ h1{
   .question {
   border-radius: 1rem;
   padding: 1rem;
-  width: 80%;
-  max-width: 800px;
+  width: 100%;
+  max-width: 100%;
   text-align: center;
   color: white;
   pointer-events: auto; /* genaktiver klik i spørgeboks */
+
   }
   
   .question h2 {
     margin-bottom: 1rem;
-    font-size: 1.5rem;
+    font-size: 20px;
+    font-family: var(--overskrift);
+    text-align: center;
   }
   
   .question button {
@@ -117,9 +118,10 @@ h1{
     padding: 0.6rem 1.2rem;
     border: none;
     border-radius: 0.5rem;
-    font-size: 1rem;
+    font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s;
+    font-family: var(--brodtekst);
   }
   
   .question button.correct {
@@ -130,4 +132,23 @@ h1{
   .question button.incorrect {
     background-color: crimson;
     color: white;
+  }
+
+
+
+  #reset-btn {
+    margin-top: 1rem;
+    padding: 0.8rem 1.6rem;
+    font-size: 1.1rem;
+    background-color: #ffffffcc;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-weight: bold;
+    color: #333;
+    transition: background-color 0.3s;
+  }
+  
+  #reset-btn:hover {
+    background-color: #ffffff;
   }
