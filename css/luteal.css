@@ -10,8 +10,6 @@
 
       /* Fonte */
     --brodtekst: 'lato', sans-serif;
-    --brodtekst-tynd: 300;
-    --brodtekst-regular: 300;
     --overskrift: 'poppins', sans-serif;
     --overskrift-tyk: 900;
 }
@@ -45,10 +43,25 @@ h1 {
   justify-self: center; /* Centrere teksten */
 }
 
+p{
+  font-family: var(--brodtekst);
+  color: var(--hvid);
+}
+
 #baggrundsfigur{
     width: 40%;
     height: auto;
-    padding-left: 5%;
+    margin-left: 5%;
+}
+
+.tekst1{
+  display: flex;
+  padding-left: 10%;
+}
+
+#sur{
+  width: auto;
+  height: 2%;
 }
 
 .figur {
@@ -110,7 +123,7 @@ h1 {
 }
 
 .figur9 {
-  top: 90%;
+  top: 93%;
   left: 80%;
   transform: rotate(85deg); /* Roterer med uret */
   width: 2.7%; /*Ændre på nogle af størrelserne så der er forskel*/
@@ -122,4 +135,24 @@ h1 {
   display: flex;
   justify-self: center;
   margin-top: -5%;
+}
+
+
+#talebobbel{
+  width: 35%;
+  height: auto;
+  display: flex;
+  padding-left: 55%;
+  margin-top: -14%;
+}
+
+.footer_tekst{
+  font-family: var(--overskrift);
+  font-weight: var(--overskrift-tyk);
+  font-size: 87%;
+  color: var(--stovet);
+  text-align: center;
+  display: flex;
+  padding-left: 63%;
+  margin-top: -8.5%;
 }
