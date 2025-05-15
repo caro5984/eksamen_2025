@@ -40,7 +40,7 @@ body {
 /* Placering af knapper i hvert hjørne af skærmen */
 .tilbage { 
   top: 20; 
-  left: 20; 
+  left: 40; 
 }
 
 h1 {
@@ -54,7 +54,8 @@ h1 {
 
 .indhold{
   display: flex;
-  justify-content: space-evenly;
+  justify-self: center;
+  align-items: center;
 }
 
 .blob1{
