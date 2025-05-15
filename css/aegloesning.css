@@ -122,3 +122,22 @@ h1{
     justify-self: center;
     margin-top: -10%;
 }
+
+#talebobbel{
+    width: 45%;
+    height: auto;
+    display: flex;
+    padding-left: 55%;
+    margin-top: -12%;
+  }
+  
+  .footer_tekst{
+    font-family: var(--overskrift);
+    font-weight: var(--overskrift-tyk);
+    font-size: 87%;
+    color: var(--stovet);
+    text-align: center;
+    display: flex;
+    padding-left: 63%;
+    margin-top: -8.5%;
+  }
