@@ -28,6 +28,19 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  let currentIndex = 0;
+  const images = document.querySelectorAll('.tekst-billeder img');
+
+  function nextImage() {
+    // Fjern 'active' fra nuværende billede
+    images[currentIndex].classList.remove('active');
+    // Gå til næste billede (loop tilbage til 0 hvis sidst)
+    currentIndex = (currentIndex + 1) % images.length;
+    // Tilføj 'active' til det nye billede
+    images[currentIndex].classList.add('active');
+  }
+
+
   function checkAnswer(button, isCorrect) {
     const questionBox = button.parentElement;
     const allButtons = questionBox.querySelectorAll('button');
@@ -77,7 +90,6 @@ document.addEventListener("DOMContentLoaded", () => {
       resetBtn.textContent = allCorrect ? 'Flot klaret!' : 'Prøv igen';
     }
   }
-  
   
   function resetQuiz() {
     const allButtons = document.querySelectorAll('.question button');

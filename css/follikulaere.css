@@ -126,7 +126,7 @@ h1 {
 
 .figur11 {
   top: 40%;
-  left: 90%;
+  left: 91%;
   width: 3%; 
 }
 
@@ -164,25 +164,6 @@ h1 {
   z-index: 1;
 }
 
-.quiz-wrapper {
-  position: relative;
-  width: 50%;
-  aspect-ratio: 574 / 652;
-  margin-top: -2%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.quiz-wrapper img {
-  width: 85%;
-  object-fit: contain;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 0;
-}
-
 /* Hånden */
 .hand-pointer {
   position: absolute;
@@ -213,6 +194,138 @@ h1 {
   }
 }
 
+.quiz-wrapper {
+  position: relative;
+  width: 50%;
+  aspect-ratio: 574 / 652;
+  margin-top: -2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.quiz-wrapper img {
+  width: 85%;
+  object-fit: contain;
+  position: absolute;
+  top: 0;
+  left: 5%;
+  z-index: 0;
+}
+
+/*styling og postionering af spørgsmål og svar + knap i quiz-contaioner*/
+.quiz-container {
+  position: absolute;
+  top: 12%;
+  left: 14%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  overflow-y: auto;
+}
+
+/*styling og postionering af spørgsmål + svar i contaioner */
+.question {
+padding: 3px;
+width: 100%;
+max-width: 100%;
+text-align: center;/*HVIS DET SKAL ÆNDRES TIL VENSTRE STILLET - KIG HER*/
+color: white;
+flex-wrap: wrap;
+justify-content: center;    /*HVIS DET SKAL ÆNDRES TIL VENSTRE STILLET - KIG HER*/
+gap: 1rem;
+
+}
+
+ /*styling og postionering af spørgsmål i quizzen */
+.question h2 {
+  margin-bottom: 0.1rem;
+  font-size: 15px;
+  font-family: var(--overskrift);
+  text-align: center;
+
+}
+
+ /*styling og postionering af valgmulighederne*/
+  .question button {
+  position: relative;
+  margin: 0.2rem;/* styrer afstanden mellem spørgsmålene og svar*/
+  padding: 0.6rem 1.2rem 0.6rem 2.2rem; /* plads til cirkel */
+  font-size: 12px;
+  border: none;
+  border-radius: 5rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  background-color: #ffffff00;
+  color: #fff;
+  text-align: center;   /*HVIS DET SKAL ÆNDRES TIL VENSTRE STILLET - KIG HER*/
+  left: 0;    /*HVIS DET SKAL ÆNDRES TIL VENSTRE STILLET - KIG HER*/
+  }
+
+  /*styling af knap, ved korrekt svar*/
+.question button.correct {
+  background-color: rgba(0, 128, 0, 0.752);
+  color: white;
+}
+
+ /*styling af knap, ved forkert svar*/
+.question button.incorrect {
+  background-color: rgba(220, 20, 60, 0.376);
+  color: white;
+}
+
+/* Cirklen ved spørgsmålet*/
+.question button::before {
+  content: "";
+  position: absolute;
+  left: 0.2rem; /*afstand mellem cirkel og spørgsmål*/
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1rem;
+  height: 1rem;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  background-color: transparent;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+/* Cirkelen udfyldt ved klik */
+.question button.selected::before {
+  background-color: #fff;
+  border-color: #fff;
+}
+
+/* Farveændring ved korrekt*/
+.question button.correct::before {
+  background-color: green;
+  border-color: green;
+}
+
+/* Farveændring ved forkert */
+.question button.incorrect::before {
+  background-color: crimson;
+  border-color: crimson;
+}
+
+#reset-btn {
+  padding: 0.8rem 1.5rem;
+  font-size: 12px;
+  background-color: #ffffffcc;
+  border: none;
+  border-radius: 5rem;
+  cursor: pointer;
+  font-weight: bold;
+  color: #333;
+  transition: background-color 0.3s;
+  pointer-events: auto;
+  font-family: var(--overskrift);
+}
+
+#reset-btn:hover {
+  background-color: #ffffff;
+}
+
 footer{
   position: fixed;
   bottom: 0;
@@ -233,7 +346,7 @@ footer{
   height: auto;
   display: flex;
   padding-left: 55%;
-  margin-top: -10%;
+  margin-top: -9%;
 }
 
 .footer_tekst{
