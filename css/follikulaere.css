@@ -167,7 +167,7 @@ h1 {
 /* Hånden */
 .hand-pointer {
   position: absolute;
-  top: 53%;
+  top: 54%;
   left: 36%;
   width: 2%;
   pointer-events: none;  /* Så den ikke blokerer klik */
