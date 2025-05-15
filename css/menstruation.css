@@ -72,7 +72,7 @@ h1{
   /* Venstre side - container med video */
 .videoside {
     width: 50%;
-    height: 50%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -80,10 +80,30 @@ h1{
 
 /*styling og postionering af selve billedet til videoen*/
   .videobaggrund {
-    width: 100%;
-    height: 100%;
+    width: 40%;
+    height: 40%;
+    margin-left: 150px;
+    top: 300px;
     object-fit: cover;
+    position: absolute;
+    z-index: 0;
   }
+
+
+  .videooverlay {
+    position: absolute;
+    top: 10px;
+    left: 20%;
+    width: 20%;
+    height: 10%;
+    object-fit: cover; /* Sørger for at videoen udfylder hele området uden at forvrænges */
+    z-index: 1;
+}
+
+
+
+
+
 
 /*styling og postionering af både billed og tekst i quiz*/
   .quiz-wrapper {
