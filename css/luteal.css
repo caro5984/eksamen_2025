@@ -14,6 +14,15 @@
     --overskrift-tyk: 900;
 }
 
+html, body {
+  margin: 0; /* Fjerner standard margin */
+  padding: 0; /* Fjerner standard padding */
+  width: 100%; /* Gør elementet 100% af viewportens bredde */
+  height: 100%; /* Gør elementet 100% af viewportens højde */
+  overflow: hidden; /* Forhindrer både vandret og lodret scroll */
+  touch-action: none; /* Forhindrer swipe, pinch-zoom og anden touch-adfærd på touch-skærme */
+}
+
 body {
   background-color: var(--stovet);
   overflow: hidden;
@@ -129,14 +138,20 @@ p{
   width: 2.7%; /*Ændre på nogle af størrelserne så der er forskel*/
 }
 
+footer{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
 #efteraarsfigur{
   width: 10%;
   height: auto;
   display: flex;
   justify-self: center;
-  margin-top: -5%;
+  margin-top: -11%;
 }
-
 
 #talebobbel{
   width: 35%;
