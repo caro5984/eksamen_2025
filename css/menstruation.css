@@ -89,7 +89,7 @@ h1{
     z-index: 0;
   }
 
-
+/*styling og postionering af selve videoen*/
   .videooverlay {
     position: absolute;
     top: 47%;
@@ -99,6 +99,7 @@ h1{
     object-fit: cover; /* Sørger for at videoen udfylder hele området uden at forvrænges */
     z-index: 1;
     border-radius: 10px;
+    pointer-events: none; /* forhindrer klik før video starter */
 }
 
 
@@ -242,4 +243,18 @@ h1{
   }
 
 
-
+  .play-button {
+    position: absolute;
+    z-index: 2;
+    top: 62%;
+    left: 22%;
+    transform: translate(-50%, -50%);
+    width: 80px;  /* eller det du ønsker */
+    height: 80px;
+    cursor: pointer;
+    transition: opacity 0.3s;
+  }
+  
+  .play-button:hover {
+   cursor: pointer;
+  }

@@ -62,3 +62,23 @@ function checkAnswer(button, isCorrect) {
     resetBtn.textContent = 'Prøv igen';
   }
 
+  document.addEventListener("DOMContentLoaded", function () {
+    const video = document.getElementById("video");
+    const playBtn = document.getElementById("play-btn");
+  
+    playBtn.addEventListener("click", function () {
+      video.play()
+        .then(() => {
+          playBtn.style.display = "none";
+        })
+        .catch(err => {
+          console.error("Video kunne ikke afspilles:", err);
+        });
+    });
+  
+    // VIGTIGT: Sørg for at dette er med!
+    video.addEventListener("ended", function () {
+      video.currentTime = 0; // Gå til start igen
+      playBtn.style.display = "block"; // Vis play-knappen igen
+    });
+  });
