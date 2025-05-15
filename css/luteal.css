@@ -40,7 +40,7 @@ h1 {
   font-family: var(--overskrift);/* Tekstens font */
   font-weight: var(--overskrift-tyk);/* Tykkelse på fonten */
   font-size: 400%; /* Tekst størrelse */
-  color: var(--rose); /* Teksten farve */
+  color: var(--hvid); /* Teksten farve */
   text-transform: uppercase; /* Gør alle bogstver store */
   justify-self: center; /* Centrere teksten */
 }
@@ -96,18 +96,24 @@ h1 {
 }
 
 .figur7 {
-  top: 30%;
-  left: 50%;
+  top: 18%;
+  left: 90%;
+  transform: rotate(85deg); /* Roterer med uret */
+  width: 2.7%; /*Ændre på nogle af størrelserne så der er forskel*/
 }
 
 .figur8 {
-  top: 30%;
-  left: 50%;
+  top: 50%;
+  left: 95%;
+  transform: rotate(320deg); /* Roterer med uret */
+  width: 2.7%; /*Ændre på nogle af størrelserne så der er forskel*/
 }
 
 .figur9 {
-  top: 30%;
-  left: 50%;
+  top: 90%;
+  left: 80%;
+  transform: rotate(85deg); /* Roterer med uret */
+  width: 2.7%; /*Ændre på nogle af størrelserne så der er forskel*/
 }
 
 #efteraarsfigur{
