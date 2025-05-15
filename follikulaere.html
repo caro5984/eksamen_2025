@@ -51,6 +51,33 @@
       
         <section class="quiz-wrapper">
           <img src="/images/quiz blob .png" alt="quiz billede" class="quizbillede"/>
+
+          <div class="quiz-container">
+            
+            <div class="question">
+                <h2>1. Hvornår starter follikulærfasen?</h2>
+                <button onclick="checkAnswer(this, false)">Når ægget bliver<br>befrugtet</button>
+                <button onclick="checkAnswer(this, false)">Den første dag<br>man får menstruation</button>
+                <button onclick="checkAnswer(this, true)">Når menstruationen<br>slutter</button>
+            </div>
+
+            <div class="question">
+                <h2><br>2. Hvilket hormon hjælper livmoderen om at blive klar til et æg?</h2>
+                <button onclick="checkAnswer(this, true)">Østrogen</button>
+                <button onclick="checkAnswer(this, false)">Sukker</button>
+                <button onclick="checkAnswer(this, false)">Insulin</button>
+            </div>
+
+            <div class="question">
+                <h2><br>3. Hvad sker der med æggene i follikulærfasen?</h2>
+                <button onclick="checkAnswer(this, true)">De bliver alle<br>til babyer</button>
+                <button onclick="checkAnswer(this, false)">Et æg begynder at<br>vokse i æggestokken</button>
+                <button onclick="checkAnswer(this, false)">De forsvinder</button>
+            </div>
+
+            <button id="reset-btn" onclick="resetQuiz()" style="display: none;">Prøv igen</button>
+        </div>
+
         </section>
       
         <!-- Hånden placeres her, inde i indhold -->
