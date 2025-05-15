@@ -51,13 +51,6 @@ h1 {
     padding-left: 5%;
 }
 
-#efteraarsfigur{
-  padding-left: 50%;
-  padding-bottom: 30%;
-  width: 12%;
-  height: auto;
-}
-
 .figur {
   position: absolute;
   width: 4%; 
@@ -115,4 +108,12 @@ h1 {
 .figur9 {
   top: 30%;
   left: 50%;
+}
+
+#efteraarsfigur{
+  width: 10%;
+  height: auto;
+  display: flex;
+  justify-self: center;
+  margin-top: -5%;
 }
