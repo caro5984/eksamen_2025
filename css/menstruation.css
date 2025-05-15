@@ -16,12 +16,19 @@
     --overskrift-tyk: 900;
 }
 
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
 body {
   background-color: var(--blod);
   width: 100%;
   height: 100%;
   overflow: hidden;
 }
+
 
 
 h1{
@@ -36,20 +43,15 @@ h1{
 }
 
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  
 
+  /* flexer video og quiz */
   .layout {
     display: flex;
     width: 100%;
     height: 100%;
   }
 
-  /* Venstre side */
+  /* Venstre side - container med video */
 .videoside {
     width: 50%;
     height: 50%;
@@ -58,14 +60,14 @@ h1{
     align-items: center;
   }
 
-
+/*styling og postionering af selve billedet til videoen*/
   .videobaggrund {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
 
-
+/*styling og postionering af både billed og tekst i quiz*/
   .quiz-wrapper {
     position: relative;
     width: 100%;
@@ -73,14 +75,18 @@ h1{
     display: flex;
     justify-content: center;
     align-items: center;
+    left: 5%;
+    bottom: 50px;
   }
 
+  /*styling og postionering af selve billedet til quizboksen*/
   .quizbillede {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    width: 78%;
+    height: 78%;
+    
   }
 
+ /*styling og postionering af spørgsmål og svar + knap i quiz-contaioner*/
   .quiz-container {
     position: absolute;
     top: 0;
@@ -92,12 +98,13 @@ h1{
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    pointer-events: none; /* forhindrer overlay i at blokere billedet */
+    overflow-y: auto;
   }
   
+  /*styling og postionering af spørgsmål + svar i contaioner */
   .question {
   border-radius: 1rem;
-  padding: 1rem;
+  padding: 1px;
   width: 100%;
   max-width: 100%;
   text-align: center;
@@ -106,40 +113,81 @@ h1{
 
   }
   
+   /*styling og postionering af spørgsmål i quizzen */
   .question h2 {
-    margin-bottom: 1rem;
-    font-size: 20px;
+    margin-bottom: 0.1rem;
+    font-size: 18px;
     font-family: var(--overskrift);
     text-align: center;
   }
   
-  .question button {
-    margin: 0.3rem;
-    padding: 0.6rem 1.2rem;
-    border: none;
-    border-radius: 0.5rem;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    font-family: var(--brodtekst);
-  }
+   /*styling og postionering af valgmulighederne*/
+    .question button {
+        position: relative;
+        margin: 0.3rem;
+        padding: 0.6rem 1.2rem 0.6rem 2.2rem; /* plads til cirkel */
+        font-size: 14px;
+        border: none;
+        border-radius: 0.5rem;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        background-color: #ffffff00;
+        color: #fff;
+        text-align: left;
+      }
   
+    /*styling af knap, ved korrekt svar*/
   .question button.correct {
-    background-color: green;
+    background-color: rgba(0, 128, 0, 0.752);
     color: white;
   }
   
+   /*styling af knap, ved forkert svar*/
   .question button.incorrect {
-    background-color: crimson;
+    background-color: rgba(220, 20, 60, 0.376);
     color: white;
   }
 
 
-
+ 
+  
+  /* Cirklen ved spørgsmålet*/
+  .question button::before {
+    content: "";
+    position: absolute;
+    left: 0.2rem; /*afstand mellem cirkel og spørgsmål*/
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1rem;
+    height: 1rem;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    background-color: transparent;
+    transition: background-color 0.3s, border-color 0.3s;
+  }
+  
+  /* Cirkelen udfyldt ved klik */
+  .question button.selected::before {
+    background-color: #fff;
+    border-color: #fff;
+  }
+  
+  /* Farveændring ved korrekt*/
+  .question button.correct::before {
+    background-color: green;
+    border-color: green;
+  }
+  
+  /* Farveændring ved forkert */
+  .question button.incorrect::before {
+    background-color: crimson;
+    border-color: crimson;
+  }
+  
   #reset-btn {
     margin-top: 1rem;
     padding: 0.8rem 1.6rem;
-    font-size: 1.1rem;
+    font-size: 12px;
     background-color: #ffffffcc;
     border: none;
     border-radius: 0.5rem;
@@ -147,8 +195,13 @@ h1{
     font-weight: bold;
     color: #333;
     transition: background-color 0.3s;
+    pointer-events: auto;
+    
   }
   
   #reset-btn:hover {
     background-color: #ffffff;
   }
+
+
+
