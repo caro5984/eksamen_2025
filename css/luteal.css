@@ -163,8 +163,8 @@ gap: 1rem;
   border-radius: 5rem;
   cursor: pointer;
   transition: background-color 0.3s;
-  background-color: #ffffff00;
-  color: #fff;
+  background-color: var(--lilla);
+  color: var(--hvid);
   text-align: center;   /*HVIS DET SKAL ÆNDRES TIL VENSTRE STILLET - KIG HER*/
   left: 0;    /*HVIS DET SKAL ÆNDRES TIL VENSTRE STILLET - KIG HER*/
   }
@@ -172,7 +172,7 @@ gap: 1rem;
   /*styling af knap, ved korrekt svar*/
 .question button.correct {
   background-color: #157938; /*En lysere verision af den grønne farve*/
-  color: white;
+  color: var(--hvid);
 }
 
  /*styling af knap, ved forkert svar*/
