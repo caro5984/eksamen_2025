@@ -16,7 +16,7 @@
     --overskrift-tyk: 900;
 }
 
-/*STYRER ALT GRUNDLÆGGENDE*/
+/*Bruges til browser*/
 * {
     box-sizing: border-box;
     margin: 0;
@@ -63,7 +63,7 @@ h1{
     left: 20px; 
   }
 
-/*BAGGRUNDSFIGURER CSS STARTER HER*/
+/*BAGGRUNDSFIGURER MED ROTATION - CSS STARTER HER*/
   .figur {
     position: absolute;
     width: 4%; 
@@ -183,6 +183,7 @@ h1{
     pointer-events: none; /* forhindrer klik før video starter */
 }
 
+/*styling og postionering af play knap til video*/
 .play-button {
     position: absolute;
     z-index: 2;
@@ -321,6 +322,7 @@ h1{
     border-color: crimson;
   }
   
+   /* Styling og positionering af "Prøv igen / "Flot klaret" -knap */
   #reset-btn {
     padding: 0.8rem 1.5rem;
     font-size: 12px;
@@ -335,13 +337,14 @@ h1{
     font-family: var(--overskrift);
   }
   
+     /* Hover effekt til  "Prøv igen / "Flot klaret" -knap */
   #reset-btn:hover {
     background-color: #ffffff;
   }
 
-
+  /* FOOTER STARTER HER */
   
-
+   /* GENERELT TIL FOOTER */
   .footer {
     display: flex;
     align-items: flex-end;
@@ -350,12 +353,15 @@ h1{
     margin-left: 2rem;
   }
   
+
+   /* Styling og postionering af "vinterfigur" */
   #vinterfigur {
     width: 10%;
     height: auto;
     margin-left: 40%;
   }
   
+   /* Styling og postionering af talebobbel */
   #talebobbel {
     width: 45%;
     height: auto;
@@ -365,6 +371,7 @@ h1{
     z-index: -1;
   }
   
+   /* Styling og postionering af tekst i talebobbel */
   .footer_tekst {
     position: absolute;
     bottom: 72px;
