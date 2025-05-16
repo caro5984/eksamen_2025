@@ -31,7 +31,7 @@ body {
 
 .knap {
   position: absolute; /* Gør det muligt at placere knapperne i hjørnerne */
-  width: 5%; /* Knappernes størrelse */
+  width: 4%; /* Knappernes størrelse */
   height: auto; /* Knappernes størrelse */
   display: block; /* Sørger for hele billedområdet er klikbart */
   cursor: pointer; /* Gør musen til en pegende hånd ved hover */
@@ -40,7 +40,7 @@ body {
 
  /* Placering af knapper i hvert hjørne af skærmen */
  .tilbage { 
-  top: 6%; 
+  top: 1%; 
   left: 1%; 
 }
 
@@ -51,6 +51,7 @@ h1 {
   color: var(--blod); /* Teksten farve */
   text-transform: uppercase; /* Gør alle bogstver store */
   justify-self: center; /* Centrere teksten */
+  margin-top: -1%;
 }
 
 .figur {
@@ -143,7 +144,6 @@ h1 {
   aspect-ratio: 574 / 652;
   cursor: pointer;
   overflow: hidden;
-  margin-top: -2%;
   z-index: 1; /* så hånd kan være over */
 }
 
@@ -198,7 +198,7 @@ h1 {
   position: relative;
   width: 50%;
   aspect-ratio: 574 / 652;
-  margin-top: -2%;
+  margin-top: 2%;
   display: flex;
   justify-content: center;
   align-items: center;
