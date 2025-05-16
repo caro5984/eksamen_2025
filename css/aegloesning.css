@@ -195,17 +195,15 @@ h1{
   
     /*styling af knap, ved korrekt svar*/
   .question button.correct {
-    background-color: #157938; /*Den grønne farve der er brugt farven på stilken på blomsten på forårsfiguren*/;
+    background-color: #157938; /*En lysere verision af den grønne farve*/
     color: var(--hvid);
   }
   
    /*styling af knap, ved forkert svar*/
   .question button.incorrect {
-    background-color: var(--postkasserod);
+    background-color: var(--blod);
     color: var(--hvid);
   }
-
-
   
   /* Cirklen ved spørgsmålet*/
   .question button::before {
