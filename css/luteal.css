@@ -68,6 +68,15 @@ h1 {
   height: 100%;
 }
 
+.tekst-billeder{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: auto;
+  margin-top: -3%;
+  margin-left: -10%;
+}
+
 /*styling og postionering af både billed og tekst i quiz*/
 .quiz-wrapper {
   position: relative;
