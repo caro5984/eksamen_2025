@@ -69,12 +69,42 @@ h1 {
 }
 
 .tekst-billeder{
-  display: flex;
-  flex-direction: column;
+  position: relative;
   width: 50%;
+  max-width: 600px;
+  cursor: pointer;
+}
+
+.tekst-billeder img{
+  position: absolute;
+  top: 0;
+  left: 2;
+  width: 100%;
   height: auto;
-  margin-top: -3%;
-  margin-left: -10%;
+  opacity: 0;
+  transition: opacity .4s ease;
+}
+
+/* … undtagen det der har .active */
+.tekst-billeder img.active{
+  opacity: 1;
+  z-index: 1;
+}
+
+/* Klik‑hånd*/
+.hand-pointer{
+  position: absolute;
+  bottom: 27%;
+  left: 31%;
+  width: 2%;
+  z-index: 999;/*Placerer hånden ovenpå tekstfælterne*/
+  pointer-events: none; 
+  animation: bounce 1.7s infinite;
+}
+
+@keyframes bounce{
+  0%,100%{ transform: translateY(0); }
+  50%   { transform: translateY(-8px); }
 }
 
 /*styling og postionering af både billed og tekst i quiz*/
@@ -296,7 +326,7 @@ footer{
   height: auto;
   display: flex;
   padding-left: 55%;
-  margin-top: -14%;
+  margin-top: -10%;
 }
 
 .footer_tekst{
