@@ -16,12 +16,15 @@
     --overskrift-tyk: 900;
 }
 
+/*STYRER ALT GRUNDLÆGGENDE*/
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
   }
   
+
+  /*STYRER ALT GRUNDLÆGGENDE I BODY + BAGGRUNDSFARVE */
 body {
   background-color: var(--blod);
   width: 100%;
@@ -31,7 +34,7 @@ body {
 
 
 
-
+/*STYRER ALLE H1*/
 h1{
     font-family: var(--overskrift);/*Tekstens font */
     font-weight: var(--overskrift-tyk);/*Tykkelse på fonten */
@@ -44,7 +47,7 @@ h1{
 
 }
 
-
+/*TILBAGE KNAP CSS STARTER HER*/
 .knap {
     position: absolute; /* Gør det muligt at placere knapperne i hjørnerne */
     width: 5%; /* Knappernes størrelse */
@@ -60,7 +63,7 @@ h1{
     left: 20px; 
   }
 
-
+/*BAGGRUNDSFIGURER CSS STARTER HER*/
   .figur {
     position: absolute;
     width: 4%; 
@@ -145,7 +148,9 @@ h1{
     height: 100%;
   }
 
-  /* Venstre side - container med video */
+/*VIDEO-SEKTION STARTER HER*/
+
+  /* Venstre side - hele containeren med video og billede */
 .videoside {
     width: 50%;
     height: 50%;
@@ -158,8 +163,8 @@ h1{
   .videobaggrund {
     width: 50%;
     height: 50%;
-    margin-left: 150px;
-    top: 300px;
+    margin-left: 11%;
+    top: 25%;
     object-fit: contain;
     position: absolute;
     z-index: 0;
@@ -168,8 +173,8 @@ h1{
 /*styling og postionering af selve videoen*/
   .videooverlay {
     position: absolute;
-    top: 47%;
-    left: 7%;
+    top: 35%;
+    left: 10%;
     width: 30%;
     height: 30%;
     object-fit: cover; /* Sørger for at videoen udfylder hele området uden at forvrænges */
@@ -178,17 +183,34 @@ h1{
     pointer-events: none; /* forhindrer klik før video starter */
 }
 
+.play-button {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    width: 80px;  /* eller det du ønsker */
+    height: 80px;
+    cursor: pointer;
+    transition: opacity 0.3s;
+  }
+  
+  .play-button:hover {
+   cursor: pointer;
+  }
 
+/*QUIZ-SEKTION STARTER HER*/
 
 /*styling og postionering af både billed og tekst i quiz*/
   .quiz-wrapper {
     position: relative;
-    width: 100%;
+    width: 80%;
     height: 45%;
     display: flex;
     justify-content: center;
     align-items: center;
     left: 5%;
+    margin-top: 5%;
     bottom: 50px;
   }
 
@@ -196,7 +218,6 @@ h1{
   .quizbillede {
     width: 78%;
     height: 78%;
-    
   }
 
  /*styling og postionering af spørgsmål og svar + knap i quiz-contaioner*/
@@ -230,7 +251,7 @@ h1{
    /*styling og postionering af spørgsmål i quizzen */
   .question h2 {
     margin-bottom: 0.1rem;
-    font-size: 18px;
+    font-size: 16px;
     font-family: var(--overskrift);
     text-align: center;
 
@@ -241,7 +262,7 @@ h1{
         position: relative;
         margin: 0.1rem;/* styrer afstanden mellem spørgsmålene og svar*/
         padding: 0.6rem 1.2rem 0.6rem 2.2rem; /* plads til cirkel */
-        font-size: 14px;
+        font-size: 12px;
         border: none;
         border-radius: 5rem;
         cursor: pointer;
@@ -319,21 +340,7 @@ h1{
   }
 
 
-  .play-button {
-    position: absolute;
-    z-index: 2;
-    top: 62%;
-    left: 22%;
-    transform: translate(-50%, -50%);
-    width: 80px;  /* eller det du ønsker */
-    height: 80px;
-    cursor: pointer;
-    transition: opacity 0.3s;
-  }
   
-  .play-button:hover {
-   cursor: pointer;
-  }
 
   .footer {
     display: flex;
