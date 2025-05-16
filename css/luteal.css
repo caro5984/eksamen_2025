@@ -44,21 +44,13 @@ body {
 }
 
 h1 {
-  font-family: var(--overskrift);/* Tekstens font */
-  font-weight: var(--overskrift-tyk);/* Tykkelse på fonten */
-  font-size: 400%; /* Tekst størrelse */
-  color: var(--hvid); /* Teksten farve */
-  text-transform: uppercase; /* Gør alle bogstver store */
-  justify-self: center; /* Centrere teksten */
-}
-
-#infographic{
-  display: flex;
-  flex-direction: column;
-  width: 50%;
-  height: auto;
-  margin-top: -3%;
-  margin-left: -10%;
+  font-family: var(--overskrift);/*Tekstens font */
+  font-weight: var(--overskrift-tyk);/*Tykkelse på fonten */
+  font-size: 400%; /*tekst størrelse*/
+  color: var(--hvid); /*Teksten farve*/
+  text-transform: uppercase; /*Gør alle bogstver store*/
+  justify-self: center; /*Centrere teksten*/
+  margin-top: 1%;
 }
 
 /* flexer video og quiz */
@@ -70,15 +62,15 @@ h1 {
 
 .tekst-billeder{
   position: relative;
-  width: 50%;
-  max-width: 600px;
+  width: 60%;
+  max-width: 60%;
   cursor: pointer;
 }
 
 .tekst-billeder img{
   position: absolute;
   top: 0;
-  left: 2;
+  left: 5%;
   width: 100%;
   height: auto;
   opacity: 0;
@@ -95,7 +87,7 @@ h1 {
 .hand-pointer{
   position: absolute;
   bottom: 27%;
-  left: 31%;
+  left: 37%;
   width: 2%;
   z-index: 999;/*Placerer hånden ovenpå tekstfælterne*/
   pointer-events: none; 
@@ -121,8 +113,7 @@ h1 {
 /*styling og postionering af selve billedet til quizboksen*/
 .quizbillede {
   width: 80%;
-  height: auto;
-  
+  height: auto; 
 }
 
 /*styling og postionering af spørgsmål og svar + knap i quiz-contaioner*/
@@ -146,7 +137,7 @@ padding: 1px;
 width: 100%;
 max-width: 100%;
 text-align: center;/*HVIS DET SKAL ÆNDRES TIL VENSTRE STILLET - KIG HER*/
-color: white;
+color: var(--hvid);
 flex-wrap: wrap;
 justify-content: center;    /*HVIS DET SKAL ÆNDRES TIL VENSTRE STILLET - KIG HER*/
 gap: 1rem;
@@ -180,14 +171,14 @@ gap: 1rem;
 
   /*styling af knap, ved korrekt svar*/
 .question button.correct {
-  background-color: rgba(0, 128, 0, 0.752);
+  background-color: #157938; /*En lysere verision af den grønne farve*/
   color: white;
 }
 
  /*styling af knap, ved forkert svar*/
 .question button.incorrect {
-  background-color: rgba(220, 20, 60, 0.376);
-  color: white;
+  background-color: var(--blod);
+  color: var(--hvid);
 }
 
 /* Cirklen ved spørgsmålet*/
@@ -199,7 +190,7 @@ gap: 1rem;
   transform: translateY(-50%);
   width: 1rem;
   height: 1rem;
-  border: 2px solid #fff;
+  border: 2px solid var(--hvid);
   border-radius: 50%;
   background-color: transparent;
   transition: background-color 0.3s, border-color 0.3s;
@@ -207,38 +198,38 @@ gap: 1rem;
 
 /* Cirkelen udfyldt ved klik */
 .question button.selected::before {
-  background-color: #fff;
-  border-color: #fff;
+  background-color: var(--hvid);
+  border-color: var(--hvid);
 }
 
 /* Farveændring ved korrekt*/
 .question button.correct::before {
-  background-color: green;
-  border-color: green;
+  background-color: #0f5528;
+  border-color: #0f5528; /*Den grønne farve der er brugt farven på stilken på blomsten på forårsfiguren*/
 }
 
 /* Farveændring ved forkert */
 .question button.incorrect::before {
-  background-color: crimson;
-  border-color: crimson;
+  background-color: var(--postkasserod);
+  border-color: var(--postkasserod);
 }
 
 #reset-btn {
   padding: 0.8rem 1.5rem;
   font-size: 12px;
-  background-color: #ffffffcc;
+  background-color: var(--hvid);
   border: none;
   border-radius: 5rem;
   cursor: pointer;
   font-weight: bold;
-  color: #333;
+  color: var(--lilla);
   transition: background-color 0.3s;
   pointer-events: auto;
   font-family: var(--overskrift);
 }
 
 #reset-btn:hover {
-  background-color: #ffffff;
+  background-color: var(--hvid);
 }
 
 .figur {
