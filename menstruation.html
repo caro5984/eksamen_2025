@@ -6,7 +6,7 @@
     <title>Menstruationsfasen</title>
 
 
-     <!--Logo-->
+     <!--Logo til fane-->
      <link rel="icon" type="image/x-icon" href="/images/vinterfigur.png">
 
      <!-- Font fra google fonts: https://fonts.google.com/selection -->
@@ -17,7 +17,7 @@
  
 </head>
 <body>
-
+<!--Her indsættes "tilbage knap" + titel på siden-->
     <header>
         <a href="index.html">
             <img src="images/tilbage1.png" alt="Gå tilbage til forsiden" class="knap tilbage"/>
@@ -30,8 +30,8 @@
     
 
     <main>
-
-        <div class="blomster">
+<!--Her er snefnug til baggrunden-->
+        <div class="snefnug">
             <img src="images/snefnug.png" alt="snefnug" class="figur figur1">
             <img src="images/snefnug.png" alt="snefnug" class="figur figur2">
             <img src="images/snefnug.png" alt="snefnug" class="figur figur3">
@@ -45,24 +45,31 @@
             <img src="images/snefnug.png" alt="snefnug" class="figur figur11">
         </div>
         
+        <!--layout container til main indhold - bruges så video og quiz kan flexes-->
     <div class="layout">
 
+        <!--container til video siden-->
         <div class="videoside">
-                <img src="/images/video.png" alt="baggrundtilvideo" class="videobaggrund"/>
+                <img src="/images/video.png" alt="baggrundtilvideo" class="videobaggrund"/>  <!--baggrundsbillede/boks til video-->
 
+                <!--video indsat her-->
                 <video id="video" class="videooverlay">
                     <source src="/video/Menstruationsvideo_eksamen.mp4" type="video/mp4">
                 </video>
 
+                <!--play knap indsat her-->
                 <img src="/images/playknap.png" alt="Play video" id="play-btn" class="play-button" />
         </div>
 
+        <!--quiz-wrapper container til quiz- indeholder baggrundsbillede, spørgsmål, svarmuligheder + reset knap - så det hele kan rykkes på -->
         <section class="quiz-wrapper">
     
-            <img src="/images/quiz blob 2.png" alt="quiz billede" class="quizbillede"/>
+            <img src="/images/quiz blob 2.png" alt="quiz billede" class="quizbillede"/> <!--baggrundsbillede/boks til quiz-->
 
+            <!--contaioner kun til spørgsmål, svar og reset knap - bruges så man kan kontrollere opstilling af teksten-->
                 <div class="quiz-container">
             
+                    <!--Contaioner til kun at kontrollere spørgsmål og svar -->
                     <div class="question">
                         <h2>1. Hvad sker der med et ubefrugtet æg?</h2>
                         <button onclick="checkAnswer(this, false)">Det bliver til et sår</button>
@@ -84,6 +91,7 @@
                         <button onclick="checkAnswer(this, false)">Kun, hvis du er teenager</button>
                     </div>
 
+                    <!--Reset knap - "prøv igen"/"flot klaret -knap" indsat her-->
                     <button id="reset-btn" onclick="resetQuiz()" style="display: none;">Prøv igen</button>
                 </div>
                 
@@ -91,10 +99,16 @@
     </div>
     </main>
 
+     <!--Footer med bloddråbe figur og talebobbel-->
     <footer>
  
+        <!--Billede med bloddråbe figur-->
           <img id="vinterfigur" src="images/vinterfigur.png" alt="vinterfigur">
+
+          <!--Billede med talebobbel-->
           <img id="talebobbel" src="images/talebobbel.png" alt="talebobbel">
+
+          <!--Tekst til talebobblen-->
           <p class="footer_tekst"> 
             Hej med dig! <br>
             Vi er nu nået til menstruationsfasen - også kaldet vinter<br>
@@ -103,6 +117,7 @@
         
       </footer>
 
+      <!--link til javasript-->
     <script src="js/menstruation.js" defer></script> <!--Den skal have defer, ellers kører scriptet før videoen er indlæst.-->
 </body>
 </html>
