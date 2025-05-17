@@ -44,19 +44,18 @@ h1{
 }
 
 #infographic{
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    height: auto;
-    margin-top: -3%;
-    margin-left: -10%;
+    display: flex; 
+    flex-direction: column; 
+    width: 50%; /*Bredde på billedet*/
+    height: auto; /*Højde på billedet*/
+    margin-top: -3%; /*tilpasser til siden */
+    margin-left: -10%; /*tilpasser til siden */
 }
 .figur {
-    position: absolute;
-    width: 4%; 
+    position: absolute; /* Gør det muligt at placere figurerne i vilkårlige positioner */
+    width: 4%; /* Størrelse på figurerne */
     z-index: -1; /* bag indhold */
     pointer-events: none; /* så den ikke forstyrrer klik */
-    position: absolute;
     transition: top 2s ease, left 2s ease; /* Glidende bevægelse */
   }
 
@@ -74,7 +73,7 @@ h1{
   }
   
   .figur3 {
-    top: 90%;
+    top: 90%; 
     left: 3%;
     width: 3%; 
     transform: rotate(60deg);
@@ -115,27 +114,26 @@ h1{
     left: 45%;
   }
 
-   /* flexer video og quiz */
+   /* flexer infographic og quiz */
    .layout {
     display: flex;
-    width: 100%;
+    width: 100%; 
     height: 100%;
   }
 
-  /*styling og postionering af både billed og tekst i quiz*/
+  /*styling og postionering af både baggundfigur og tekst i quiz*/
   .quiz-wrapper {
     position: relative;
-    width: 90%;
-    height: 45%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    bottom: 50px;
+    width: 90%; /*størrelsen på bobblen*/
+    height: 45%;  
+    display: flex; 
+    justify-content: center; /*centrer indhold og bobbel*/
+    bottom: 50px; 
   }
 
-  /*styling og postionering af selve billedet til quizboksen*/
+  /*styling og postionering af selve figuren til quizboksen*/
   .quizbillede {
-    width: 80%;
+    width: 80%; 
     height: auto;
     
   }
@@ -143,16 +141,14 @@ h1{
  /*styling og postionering af spørgsmål og svar + knap i quiz-contaioner*/
   .quiz-container {
     position: absolute;
-    top: 5%;
-    left: px;
-    width: 90%;
-    height: 80%;
+    top: 5%; /* adstand til toppen*/
+    height: 80%; /* styrer afstanden mellem spørgsmålene*/
     padding: 6vh 5vw;  /* styrer afstanden mellem spørgsmålene*/
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    overflow-y: auto;
+    display: flex; 
+    flex-direction: column; /*Gør at teksten ligger oven på hinanden*/
+    justify-content: space-evenly; /*Teksten har samme afstand*/
+    align-items: center; /*centrer teksten*/
+    overflow-y: auto; 
   }
   
   /*styling og postionering af spørgsmål + svar i contaioner */
@@ -160,10 +156,8 @@ h1{
   padding: 1px;
   width: 100%;
   max-width: 100%;
-  text-align: center;/*HVIS DET SKAL ÆNDRES TIL VENSTRE STILLET - KIG HER*/
-  color: var(--hvid);
-  flex-wrap: wrap;
-  justify-content: center;    /*HVIS DET SKAL ÆNDRES TIL VENSTRE STILLET - KIG HER*/
+  text-align: center;/*centrer spørgsmålene*/
+  color: var(--hvid); /*tekstens farve */
   gap: 1rem;
 
   }
@@ -172,8 +166,8 @@ h1{
   .question h2 {
     margin-bottom: 0.1rem;
     font-size: 15px;
-    font-family: var(--overskrift);
-    text-align: center;
+    font-family: var(--overskrift); /*vælger den korrekte font tils spørgsmålene */
+    text-align: center; 
 
   }
   
@@ -186,11 +180,11 @@ h1{
     border: none;
     border-radius: 5rem;
     cursor: pointer;
-    transition: background-color 0.3s;
-    background-color: var(--lilla);
-    color: var(--hvid);
-    text-align: center;   /*HVIS DET SKAL ÆNDRES TIL VENSTRE STILLET - KIG HER*/
-    left: 0;    /*HVIS DET SKAL ÆNDRES TIL VENSTRE STILLET - KIG HER*/
+    transition: background-color 0.3s; /*ændre farve ved hover*/
+    background-color: var(--lilla); /*farven på knappen*/
+    color: var(--hvid); /*farven på teksten*/
+    text-align: center; /*centrer teksten*/
+    font-family: var(--brodtekst); /*vælger den korrekte font tils svarene */
     }
   
     /*styling af knap, ved korrekt svar*/
@@ -211,12 +205,12 @@ h1{
     position: absolute;
     left: 0.2rem; /*afstand mellem cirkel og spørgsmål*/
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-50%); /* centrerer cirklen vertikalt */
     width: 1rem;
     height: 1rem;
-    border: 2px solid var(--hvid);
-    border-radius: 50%;
-    background-color: transparent;
+    border: 2px solid var(--hvid); /*farven på cirklen*/
+    border-radius: 50%; /* gør det til en cirkel */
+    background-color: transparent; /* cirklen er gennemsigtig */
     transition: background-color 0.3s, border-color 0.3s;
   }
   
@@ -229,7 +223,7 @@ h1{
   /* Farveændring ved korrekt*/
   .question button.correct::before {
     background-color: #0f5528; /*Den grønne farve der er brugt farven på stilken på blomsten på forårsfiguren*/;;
-    border-color: #0f5528; /*Den grønne farve der er brugt farven på stilken på blomsten på forårsfiguren*/;
+    border-color: #0f5528; 
   }
   
   /* Farveændring ved forkert */
@@ -241,44 +235,47 @@ h1{
   #reset-btn {
     padding: 0.8rem 1.5rem;
     font-size: 12px;
-    background-color: var(--hvid);
-    border: none;
-    border-radius: 5rem;
-    cursor: pointer;
-    font-weight: bold;
-    color: var(--lilla);
-    transition: background-color 0.3s;
-    pointer-events: auto;
-    font-family: var(--overskrift);
+    background-color: var(--hvid); /*farven på knappen*/
+    border: none; 
+    border-radius: 5rem; /*Gør knappen rund*/
+    cursor: pointer; 
+    font-weight: bold; /*Gør teksten fed*/
+    color: var(--lilla); /*farven på teksten*/
+    transition: background-color 0.3s; /*ændre farve ved hover*/
+    pointer-events: auto; /* gør knappen klikbar */
+    font-family: var(--overskrift); /*vælger den korrekte font tils knappen */
   }
   
   #reset-btn:hover {
     background-color: var(--hvid);
   }
 
+  /*Styler på den bloddråbe figuren */
   #sommerfigur{
-    width: 10%;
+    width: 10%; /*størrelsen på firguren */
     height: auto;
     display: flex;
-    justify-self: center;
-    margin-top: -8%;
+    justify-self: center; /*centrer figuren*/
+    margin-top: -8%; /*tilpasser til siden */
 }
 
+   /*Styler på den bloddråbe figurens taleboble */
   #talebobbel{
-    width: 45%;
-    height: auto;
-    display: flex;
-    padding-left: 55%;
-    margin-top: -12%;
+    width: 45%; /*størrelsen på taleboblen */
+    height: auto; /*højde på taleboblen*/
+    display: flex; 
+    padding-left: 55%; /*tilpasser til siden */
+    margin-top: -12%; /*tilpasser til siden */
   }
   
+   /*Styler på den bloddråbe figurens talebobble tekst */
   .footer_tekst{
-    font-family: var(--overskrift);
-    font-weight: var(--overskrift-tyk);
-    font-size: 87%;
-    color: var(--støvet);
-    text-align: center;
-    display: flex;
-    padding-left: 65%;
-    margin-top: -7.5%;
+    font-family: var(--overskrift); /*Tekstens font */
+    font-weight: var(--overskrift-tyk); /*Tykkelse på fonten */
+    font-size: 87%; /*tekst størrelse*/
+    color: var(--støvet); /*farven på teksten*/
+    text-align: center; /*centrer teksten*/
+    display: flex; 
+    padding-left: 65%; /*tilpasser til siden */
+    margin-top: -7.5%; /*tilpasser til siden */
   }
