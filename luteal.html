@@ -16,6 +16,8 @@
 
 </head>
 <body>
+
+<!--Her indsættes "tilbage knap" + titel på siden-->
     <header>
         <a href="index.html">
             <img src="images/tilbage4.png" alt="Gå tilbage til forsiden" class="knap tilbage">
@@ -24,19 +26,26 @@
     </header>
 
     <main>
+        <!--layout container til main indhold - bruges så info og quiz kan flexes-->
         <div class="layout">
 
+        <!--container med de to informationsfigurer med tekster-->
             <section class="tekst-billeder" onclick="nextImage()">
                 <img src="images/lutealtekst1.png" class="active">
                 <img src="images/lutealtekst2.png">
               </section>
 
-            <!-- Hånden placeres her, inde i indhold -->
+            <!-- Hånden placeres her, indikerer at man kan klikke på informationerne -->
             <img src="images/tryk1.png" alt="Klik her" class="hand-pointer">
     
+            <!--quiz-wrapper container til quiz - indeholder baggrundsbillede, spørgsmål, svarmuligheder + reset knap - så det hele kan rykkes på -->
             <div class="quiz-wrapper">
-                <img src="/images/quiz blob 2.png" alt="quiz billede" class="quizbillede"/>
+                <img src="/images/quiz blob 2.png" alt="quiz billede" class="quizbillede"/> <!--baggrundsbillede/boks til quiz-->
+                  
+                <!--contaioner kun til spørgsmål, svar og reset knap - bruges så man kan kontrollere opstilling af teksten-->
                     <div class="quiz-container">
+
+                <!--Contaioner til kun at kontrollere spørgsmål og svar -->
                         <div class="question">
                             <h2>1. Hvad sker der med humøret i lutealfasen?</h2>
                             <button onclick="checkAnswer(this, true)">Humørsvingninger</button>
@@ -57,12 +66,14 @@
                             <button onclick="checkAnswer(this, true)">Være god og sød mod sig selv</button>
                             <button onclick="checkAnswer(this, false)">Sove gennem hele fasen</button>
                         </div>
-    
+
+                <!--Reset knap - "prøv igen"/"flot klaret -knap" indsat her-->
                         <button id="reset-btn" onclick="resetQuiz()" style="display: none;">Prøv igen</button>
                     </div>  
             </div>
         </div>
 
+    <!--Her er blade til baggrunden-->
         <div class="blade">
             <img src="images/blad1.png" alt="Blad" class="figur figur1">
             <img src="images/blad1.png" alt="Blad" class="figur figur2">
@@ -76,10 +87,16 @@
         </div>
     </main>
 
+<!--Footer med bloddråbe figur og talebobbel-->
     <footer>
+
+    <!--Billede med bloddråbe figur-->
         <img id="efteraarsfigur" src="images/efterårsfigur.png" alt="efterårsfigur">
+
+    <!--Billede med talebobbel-->
         <img id="talebobbel" src="images/talebobbel.png" alt="talebobbel">
 
+    <!--Tekst til talebobblen-->
         <p class="footer_tekst"> 
         Hej  med dig! <br>
         Nu er vi nået til lutealfasen - der også kaldes efterår <br>           
@@ -87,7 +104,7 @@
     </footer>
 
 
-    <!-- Importér JS-filen -->
+    <!--link til javasript-->
 <script src="js/luteal.js"></script>
 </body>
 </html>
