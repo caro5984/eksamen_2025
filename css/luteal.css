@@ -204,7 +204,7 @@ gap: 1rem;
 
 /* Farveændring ved korrekt*/
 .question button.correct::before {
-  background-color: #0f5528;
+  background-color: #0f5528; /*Den grønne farve der er brugt farven på stilken på blomsten på forårsfiguren*/
   border-color: #0f5528; /*Den grønne farve der er brugt farven på stilken på blomsten på forårsfiguren*/
 }
 
