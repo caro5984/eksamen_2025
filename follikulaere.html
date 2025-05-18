@@ -6,28 +6,30 @@
     <title>Follikulærfasen</title>
     <link rel="stylesheet" href="/css/follikulaere.css">
 
-     <!--Logo-->
+<!--Logo-->
      <link rel="icon" type="image/x-icon" href="/images/forårsfigur.png">
 
-     <!-- Font fra google fonts: https://fonts.google.com/selection -->
+<!-- Font fra google fonts: https://fonts.google.com/selection -->
      <link rel="preconnect" href="https://fonts.googleapis.com">
      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
      <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    
- 
 </head>
+
 <body>
 
+<!--Siden header hvor der indsættes "tilbage knap" + titel på siden-->
  <header>
+
     <a href="index.html">
         <img src="images/tilbage2.png" alt="Gå tilbage til forsiden" class="knap tilbage">
     </a>
 
     <h1>FOLLIKULÆRFASEN</h1>
+
 </header>
 
 <main>
-
+<!--Her er blomsterne til baggrunden-->
     <div class="blomster">
         <img src="images/blomst.png" alt="blomster" class="figur figur1">
         <img src="images/blomst.png" alt="blomster" class="figur figur2">
@@ -42,60 +44,73 @@
         <img src="images/blomst.png" alt="blomster" class="figur figur11">
     </div>
 
+<!--Section til alt indhold på siden - sørger for at tekst indholdet og quizzen kan flexes-->
     <section class="indhold">
+
+<!--container med de to informationsfigurer med tekster-->
         <section class="tekst-billeder" onclick="nextImage()">
           <img src="images/tekst1follikulaer.png" class="active">
           <img src="images/tekst2follikulaer.png">
           <img src="images/tekst3follikulaer.png">
         </section>
-      
-        <section class="quiz-wrapper">
-          <img src="/images/quiz blob .png" alt="quiz billede" class="quizbillede"/>
 
+<!--quiz-wrapper container til quiz- indeholder baggrundsbillede, spørgsmål, svarmuligheder + reset knap - så det hele kan rykkes på -->
+        <section class="quiz-wrapper">
+          <img src="/images/quiz blob .png" alt="quiz billede" class="quizbillede"/> <!--baggrundsbillede/boks til quiz-->
+
+ <!--contaioner kun til spørgsmål, svar og reset knap - bruges så man kan kontrollere opstilling af teksten-->
           <div class="quiz-container">
             
-            <div class="question">
-                <h2>1. Hvornår starter follikulærfasen?</h2>
-                <button onclick="checkAnswer(this, false)">Når ægget bliver<br>befrugtet</button>
-                <button onclick="checkAnswer(this, false)">Den første dag<br>man får menstruation</button>
-                <button onclick="checkAnswer(this, true)">Når menstruationen<br>slutter</button>
-            </div>
+<!--Contaioner til kun at kontrollere spørgsmål og svar -->
+        <div class="question">
+            <h2>1. Hvornår starter follikulærfasen?</h2>
+            <button onclick="checkAnswer(this, false)">Når ægget bliver<br>befrugtet</button>
+            <button onclick="checkAnswer(this, false)">Den første dag<br>man får menstruation</button>
+            <button onclick="checkAnswer(this, true)">Når menstruationen<br>slutter</button>
+        </div>
 
-            <div class="question">
-                <h2><br>2. Hvilket hormon hjælper livmoderen om at blive klar til et æg?</h2>
-                <button onclick="checkAnswer(this, true)">Østrogen</button>
-                <button onclick="checkAnswer(this, false)">Sukker</button>
-                <button onclick="checkAnswer(this, false)">Insulin</button>
-            </div>
+        <div class="question">
+            <h2><br>2. Hvilket hormon hjælper livmoderen om at blive klar til et æg?</h2>
+            <button onclick="checkAnswer(this, true)">Østrogen</button>
+            <button onclick="checkAnswer(this, false)">Sukker</button>
+            <button onclick="checkAnswer(this, false)">Insulin</button>
+        </div>
 
-            <div class="question">
-                <h2><br>3. Hvad sker der med æggene i follikulærfasen?</h2>
-                <button onclick="checkAnswer(this, false)">De bliver alle<br>til babyer</button>
-                <button onclick="checkAnswer(this, true)">Et æg begynder at<br>vokse i æggestokken</button>
-                <button onclick="checkAnswer(this, false)">De forsvinder</button>
-            </div>
+        <div class="question">
+             <h2><br>3. Hvad sker der med æggene i follikulærfasen?</h2>
+            <button onclick="checkAnswer(this, false)">De bliver alle<br>til babyer</button>
+            <button onclick="checkAnswer(this, true)">Et æg begynder at<br>vokse i æggestokken</button>
+            <button onclick="checkAnswer(this, false)">De forsvinder</button>
+        </div>
 
+<!--Reset knap - "prøv igen"/"flot klaret -knap" indsat her-->
             <button id="reset-btn" onclick="resetQuiz()" style="display: none;">Prøv igen</button>
         </div>
 
-        </section>
-      
-        <!-- Hånden placeres her, inde i indhold -->
+<!-- Hånden placeres her, inde i indhold -->
+    </section>
         <img src="images/tryk1.png" alt="Klik her" class="hand-pointer">
-      </section>
+    </section>
 
 </main>
 
+<!--Footer med bloddråbe figur og talebobbel-->
 <footer>
+
+<!--Billede med bloddråbe figur-->
     <img id="foraarsfigur" src="images/forårsfigur.png" alt="forårsfigur">
+
+<!--Billede med talebobbel-->
     <img id="talebobbel" src="images/talebobbel.png" alt="talebobbel">
 
+<!--Tekst til talebobblen-->
    <p class="footer_tekst"> 
     Hej med dig! <br>
     Vi er nu i den follikulære fase - også kaldet foråret<br>
     Tryg dig i gennem denne fase og prøv quizzen!</p>
 </footer>
 
+<!--link til javasript-->
 <script src="js/follikulaere.js"></script>
 </body>
 </html>

@@ -1,3 +1,4 @@
+/*root med farve og font + bestemmelser vedrørende overskrifter*/
 :root{
     /*Farver*/
     --hvid: #FFF2E1;
@@ -16,34 +17,37 @@
     --overskrift-tyk: 900;
 }
 
+/*  */
 html, body {
   margin: 0; /* Fjerner standard margin */
   padding: 0; /* Fjerner standard padding */
   width: 100%; /* Gør elementet 100% af viewportens bredde */
   height: 100%; /* Gør elementet 100% af viewportens højde */
-  overflow: hidden; /* Forhindrer både vandret og lodret scroll */
-  touch-action: none; /* Forhindrer swipe, pinch-zoom og anden touch-adfærd på touch-skærme */
+  overflow: hidden; /* Forhindrer scroll */
+  touch-action: none; /* Forhindrer uønsket touch-interaktion */
 }
 
+/* Sætter baggrundsfarven på hele siden */
 body {
   background-color: var(--rose);
 }
 
+/*TILBAGE KNAP CSS STARTER HER*/
 .knap {
-  position: absolute; /* Gør det muligt at placere knapperne i hjørnerne */
-  width: 4%; /* Knappernes størrelse */
-  height: auto; /* Knappernes størrelse */
+  position: absolute; /* Gør det muligt at placere tilbageknappen i hjørnet */
+  width: 4%; /* Tilbageknappens størrelse */
+  height: auto; /* Tilbageknappens størrelse */
   display: block; /* Sørger for hele billedområdet er klikbart */
   cursor: pointer; /* Gør musen til en pegende hånd ved hover */
-  z-index: 10; /* Sørger for at knapperne ligger over andre elementer */
 } 
 
- /* Placering af knapper i hvert hjørne af skærmen */
+/* Placering af tilbage-knappen øverst til venstre */
  .tilbage { 
   top: 1%; 
   left: 1%; 
 }
 
+/*STYRER ALLE H1*/
 h1 {
   font-family: var(--overskrift);/* Tekstens font */
   font-weight: var(--overskrift-tyk);/* Tykkelse på fonten */
@@ -54,13 +58,13 @@ h1 {
   margin-top: -1%;
 }
 
+/*BAGGRUNDSFIGURER MED ROTATION - CSS STARTER HER*/
 .figur {
-  position: absolute;
-  width: 4%; 
-  z-index: -1; /* bag indhold */
-  pointer-events: none; /* så den ikke forstyrrer klik */
-  position: absolute;
-  transition: top 2s ease, left 2s ease; /* Glidende bevægelse */
+  position: absolute; /* Giver fri placering af blomsterne i baggrunden*/
+  width: 4%; /* Størrelse på blomst */
+  z-index: -1; /* Sørger for at blomsterne ligger bag alt andet indhold */
+  pointer-events: none; /* Sørger for at man ikke kan klikke på den, så den ikke forstyrrer andre klik */
+  transition: top 2s ease, left 2s ease; /* Glidende animation ved bevægelse */
 }
 
 .figur1 {
@@ -131,79 +135,87 @@ h1 {
   width: 3%; 
 }
 
+/*INDHOLD PÅ SIDEN (TEKST/BILLEDER OG QUIZ) CSS STARTER HER*/
 .indhold {
-  display: flex;
+  display: flex; /* Flexer indhold så det er delt op i 2 kolonner */
   position: relative;
   min-height: 700px; /* Sørger for højde nok */
-  overflow: visible;  /* vigtig: så hånden ikke bliver klippet */
 }
 
+/* INDHOLD TIL VENSTRE */
 .tekst-billeder {
   position: relative;
-  width: 50%;
-  aspect-ratio: 574 / 652;
-  cursor: pointer;
-  overflow: hidden;
+  width: 50%; /* Gør at inholdet til venstre maks kan fylde halvdelen af skærmen */
+  cursor: pointer; /* Gør musen til en pegende hånd ved hover og gør hele området klikbart */
   z-index: 1; /* så hånd kan være over */
 }
 
+/* FIGUR MED TEKST OG BILLEDER */
 .tekst-billeder img {
   position: absolute;
   top: 0;
   left: 10%;
-  width: 70%;
+  width: 70%; /* Billederne tilpasses containerens bredde */
   height: auto;
-  object-fit: contain;
-  opacity: 0;
-  transition: opacity 0.5s ease;
+  object-fit: contain; /* Sørger for billedet ikke bliver strukket */
+  opacity: 0; /* Billeder skjules som udgangspunkt */
+  transition: opacity 0.5s ease; /* Glidende overgang ved tryg/skift af billede */
   z-index: 0;
 }
 
+/* Når billedet er aktivt, vises det med højere opacitet og z-index der ligger foran de andre */
 .tekst-billeder img.active {
   opacity: 1;
   z-index: 1;
 }
 
-/* Hånden */
+/* HÅNDEN DER VISER AT MAN KAN TRYGGE PÅ BILLDERNE */
 .hand-pointer {
   position: absolute;
-  top: 54%;
-  left: 36%;
-  width: 2%;
+  top: 67%; /* Placering af hånden */
+  left: 36%; /* Placering af hånden */
+  width: 2%; /* Størrelse på hånden */
   pointer-events: none;  /* Så den ikke blokerer klik */
-  opacity: 0.9;
-  animation: pressAnimation 2s infinite ease-in-out;
+  opacity: 0.9; /* Gør hånden lidt gennemsigtig */
+  animation: pressAnimation 2s infinite ease-in-out; /* Gentaget animation så den bliver ved med at bevæge sig */
   z-index: 10;  /* Højere end billederne */
 }
 
 /* Animation – hånd der peger og trykker */
+/* @keyframes bruges til at definere en CSS-animation – i dette tilfælde en animation kaldet 'pressAnimation', som får et håndikon til at bevæge sig op og ned og ændre opacitet.*/
 @keyframes pressAnimation {
+ /* Startposition: hånden står stille og er halvt gennemsigtig */
   0% {
     transform: translateY(0);
     opacity: 0.5;
   }
+  /* Efter 30% af animationstiden: hånden hopper lidt op og bliver helt synlig */
   30% {
-    transform: translateY(-10px);
-    opacity: 1;
+    transform: translateY(-10px); /* Flyt op med 10px */
+    opacity: 1; /* Gør hånden helt synlig */
   }
+  /* Efter 50%: hånden bevæger sig tilbage til sin udgangsposition */
   50% {
-    transform: translateY(0);
+    transform: translateY(0); /* Opacity ændres ikke her – forbliver som i forrige trin */
   }
+  /* Slut: hånden bliver halvt gennemsigtig igen */
   100% {
     opacity: 0.5;
   }
 }
 
+/* INDHOLD TIL HØJRE */
+/*Styling og postionering af både billed og tekst i quiz - flytter på det hele samlet */
 .quiz-wrapper {
   position: relative;
   width: 50%;
-  aspect-ratio: 574 / 652;
   margin-top: 2%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+/*Styling og postionering af selve billedets størrelse til quizboksen*/
 .quiz-wrapper img {
   width: 85%;
   object-fit: contain;
@@ -216,7 +228,7 @@ h1 {
 /*styling og postionering af spørgsmål og svar + knap i quiz-contaioner*/
 .quiz-container {
   position: absolute;
-  top: 12%;
+  top: 14%;
   left: 14%;
   display: flex;
   flex-direction: column;
@@ -225,20 +237,20 @@ h1 {
   overflow-y: auto;
 }
 
-/*styling og postionering af spørgsmål + svar i contaioner */
+/*styling og postionering af spørgsmål + svar i container - bruges til at kontrollere opstillingen */
 .question {
 padding: 3px;
 width: 100%;
 max-width: 100%;
-text-align: center;/*HVIS DET SKAL ÆNDRES TIL VENSTRE STILLET - KIG HER*/
-color: white;
+text-align: center;
+color: var(--hvid);
 flex-wrap: wrap;
-justify-content: center;    /*HVIS DET SKAL ÆNDRES TIL VENSTRE STILLET - KIG HER*/
+justify-content: center;
 gap: 1rem;
 
 }
 
- /*styling og postionering af spørgsmål i quizzen */
+/*styling og postionering af selve spørgsmålene i quizzen */
 .question h2 {
   margin-bottom: 0.1rem;
   font-size: 15px;
@@ -247,7 +259,7 @@ gap: 1rem;
 
 }
 
- /*styling og postionering af valgmulighederne*/
+/*styling og postionering af valgmulighederne i quizzen*/
   .question button {
   position: relative;
   margin: 0.2rem;/* styrer afstanden mellem spørgsmålene og svar*/
@@ -257,22 +269,22 @@ gap: 1rem;
   border-radius: 5rem;
   cursor: pointer;
   transition: background-color 0.3s;
-  background-color: #ffffff00;
-  color: #fff;
-  text-align: center;   /*HVIS DET SKAL ÆNDRES TIL VENSTRE STILLET - KIG HER*/
-  left: 0;    /*HVIS DET SKAL ÆNDRES TIL VENSTRE STILLET - KIG HER*/
+  background-color: var(--lilla);
+  color: var(--hvid);
+  text-align: center;
+  left: 0;
   }
 
   /*styling af knap, ved korrekt svar*/
 .question button.correct {
-  background-color: rgba(0, 128, 0, 0.752);
-  color: white;
+  background-color: #157938; /*En lysere verision af den grønne farve*/
+  color: var(--hvid);
 }
 
  /*styling af knap, ved forkert svar*/
 .question button.incorrect {
-  background-color: rgba(220, 20, 60, 0.376);
-  color: white;
+  background-color: var(--blod);
+  color: var(--hvid);
 }
 
 /* Cirklen ved spørgsmålet*/
@@ -284,7 +296,7 @@ gap: 1rem;
   transform: translateY(-50%);
   width: 1rem;
   height: 1rem;
-  border: 2px solid #fff;
+  border: 2px solid var(--hvid);
   border-radius: 50%;
   background-color: transparent;
   transition: background-color 0.3s, border-color 0.3s;
@@ -292,40 +304,43 @@ gap: 1rem;
 
 /* Cirkelen udfyldt ved klik */
 .question button.selected::before {
-  background-color: #fff;
-  border-color: #fff;
+  background-color: var(--hvid);
+  border-color: var(--hvid);
 }
 
 /* Farveændring ved korrekt*/
 .question button.correct::before {
-  background-color: green;
-  border-color: green;
+  background-color: #0f5528; /*Den grønne farve der er brugt farven på stilken på blomsten på forårsfiguren*/;
+  border-color: #0f5528; /*Den grønne farve der er brugt farven på stilken på blomsten på forårsfiguren*/
 }
 
 /* Farveændring ved forkert */
 .question button.incorrect::before {
-  background-color: crimson;
-  border-color: crimson;
+  background-color: var(--postkasserod);
+  border-color: var(--postkasserod);
 }
 
+/* Styling og positionering af "Prøv igen / "Flot klaret" -knap */
 #reset-btn {
   padding: 0.8rem 1.5rem;
   font-size: 12px;
-  background-color: #ffffffcc;
+  background-color: var(--hvid);
   border: none;
   border-radius: 5rem;
   cursor: pointer;
   font-weight: bold;
-  color: #333;
+  color: var(--lilla);
   transition: background-color 0.3s;
   pointer-events: auto;
   font-family: var(--overskrift);
 }
 
+/* Hover effekt til  "Prøv igen / "Flot klaret" -knap */
 #reset-btn:hover {
-  background-color: #ffffff;
+  background-color: var(--hvid);
 }
 
+/* FOOTER CSS STARTER HER */
 footer{
   position: fixed;
   bottom: 0;
@@ -333,6 +348,7 @@ footer{
   width: 100%;
 }
 
+/* Styling og placering af dråbefigur */
 #foraarsfigur{
   width: 10%;
   height: auto;
@@ -341,6 +357,7 @@ footer{
   margin-top: -11%;
 }
 
+/* Styling og placering af talebobbel */
 #talebobbel{
   width: 35%;
   height: auto;
@@ -349,6 +366,7 @@ footer{
   margin-top: -9%;
 }
 
+/* Styling og placering af tekst i talebobbel */
 .footer_tekst{
   font-family: var(--overskrift);
   font-weight: var(--overskrift-tyk);

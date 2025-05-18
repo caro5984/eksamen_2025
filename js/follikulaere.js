@@ -1,3 +1,4 @@
+//JS TIL BLOMSTERNE DER BEVÆGER SIG I BAGGRUNDEN:
 // Vælger hvilke blomster der styles på siden, og tilføjer animation til dem))
 document.addEventListener("DOMContentLoaded", () => {
   const blomster = document.querySelectorAll(".figur1,.figur3,.figur5,.figur7,.figur9,.figur11");
@@ -43,33 +44,45 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+//JS TIL SKIFT VED TRYG MELLEM BILLEDERNE/TEKSTEN I VENTRE SIDE
 
+// Starter med at sætte et indeks, som holder styr på hvilket billede der vises lige nu
 let currentIndex = 0;
+
+// Finder alle <img>-elementer inde i elementet med klassen 'tekst-billeder'
   const images = document.querySelectorAll('.tekst-billeder img');
 
+// Funktion der skifter til næste billede når der klikkes
   function nextImage() {
-    // Fjern 'active' fra nuværende billede
+    // Fjerner 'active'-klassen fra det nuværende billede (så det bliver usynligt)
     images[currentIndex].classList.remove('active');
-    // Gå til næste billede (loop tilbage til 0 hvis sidst)
+    // Opdaterer currentIndex til næste billede
+    // Hvis vi er på det sidste billede, går den tilbage til 0 (starter forfra)
     currentIndex = (currentIndex + 1) % images.length;
-    // Tilføj 'active' til det nye billede
+    // Tilføjer 'active'-klassen til det nye billede (så det bliver synligt)
     images[currentIndex].classList.add('active');
   }
 
+//JS TIL QUIZZEN I HØJRE SIDE
+
+// Funktion der håndterer, når en svar-knap bliver trykket på 
   function checkAnswer(button, isCorrect) {
-    const questionBox = button.parentElement;
-    const allButtons = questionBox.querySelectorAll('button');
+    const questionBox = button.parentElement; // Finder boksen der indeholder spørgsmålet
+    const allButtons = questionBox.querySelectorAll('button'); // Finder alle svarmuligheder i boksen
   
-    // Hvis knapperne allerede er deaktiveret, gør ingenting
+   // Hvis knapperne allerede er deaktiveret, gør ingenting (spørgsmålet er allerede besvaret)
     if (allButtons[0].disabled) return;
   
+  // Deaktiver alle knapper og fjerner evt. tidligere markering
     allButtons.forEach(btn => {
       btn.disabled = true;
       btn.classList.remove('selected'); // fjern tidligere markering
     });
   
+  // Marker den valgte knap
     button.classList.add('selected');
   
+  // Tilføj korrekt/forkert farve (grøn eller rød) baseret på svaret
     if (isCorrect) {
       button.classList.add('correct');
     } else {
@@ -80,6 +93,7 @@ let currentIndex = 0;
     checkQuizStatus();
   }
   
+  // Funktion der tjekker om alle spørgsmål er besvaret og om alle svar er korrekte
   function checkQuizStatus() {
     const allQuestions = document.querySelectorAll('.question');
     let allAnswered = true;
@@ -87,18 +101,19 @@ let currentIndex = 0;
   
     allQuestions.forEach(question => {
       const buttons = question.querySelectorAll('button');
+
+      // Hvis mindst én knap ikke er deaktiveret, er spørgsmålet ikke besvaret
       const oneIsDisabled = Array.from(buttons).some(btn => btn.disabled);
       if (!oneIsDisabled) allAnswered = false;
   
+      // Hvis mindst én knap er markeret som forkert
       const hasIncorrect = Array.from(buttons).some(btn => btn.classList.contains('incorrect'));
       if (hasIncorrect) allCorrect = false;
     });
   
-
-    
   console.log("checkQuizStatus:", { allAnswered, allCorrect });
 
-    // Når alle spørgsmål er besvaret
+    // Hvis alle spørgsmål er besvaret, vis reset-knappen med tilhørende besked
     if (allAnswered) {
       const resetBtn = document.getElementById('reset-btn');
       resetBtn.style.display = 'block';
@@ -106,15 +121,17 @@ let currentIndex = 0;
     }
   }
 
-
+  // Funktion til at nulstille quizzen
   function resetQuiz() {
     const allButtons = document.querySelectorAll('.question button');
   
+    // Gør alle knapper aktive igen og fjern farver/markering
     allButtons.forEach(btn => {
       btn.disabled = false;
       btn.classList.remove('correct', 'incorrect', 'selected');
     });
-  
+    
+    // Skjul reset-knappen og nulstil dens tekst
     const resetBtn = document.getElementById('reset-btn');
     resetBtn.style.display = 'none';
     resetBtn.textContent = 'Prøv igen';
