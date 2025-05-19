@@ -145,7 +145,7 @@ h1 {
 /* INDHOLD TIL VENSTRE */
 .tekst-billeder {
   position: relative;
-  width: 50%; /* Gør at inholdet til venstre maks kan fylde halvdelen af skærmen */
+  width: 60%; /* Gør at inholdet til venstre maks kan fylde halvdelen af skærmen */
   cursor: pointer; /* Gør musen til en pegende hånd ved hover og gør hele området klikbart */
   z-index: 1; /* så hånd kan være over */
 }
@@ -172,8 +172,8 @@ h1 {
 /* HÅNDEN DER VISER AT MAN KAN TRYGGE PÅ BILLDERNE */
 .hand-pointer {
   position: absolute;
-  top: 67%; /* Placering af hånden */
-  left: 36%; /* Placering af hånden */
+  top: 75%; /* Placering af hånden */
+  left: 40%; /* Placering af hånden */
   width: 2%; /* Størrelse på hånden */
   pointer-events: none;  /* Så den ikke blokerer klik */
   opacity: 0.9; /* Gør hånden lidt gennemsigtig */
@@ -213,15 +213,15 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
+  left: -4%;
 }
 
 /*Styling og postionering af selve billedets størrelse til quizboksen*/
 .quiz-wrapper img {
-  width: 85%;
+  width: 95%;
   object-fit: contain;
   position: absolute;
   top: 0;
-  left: 5%;
   z-index: 0;
 }
 
