@@ -47,6 +47,13 @@ document.addEventListener("DOMContentLoaded", () => {
     images[currentIndex].classList.add('active');
   }
 
+
+//js til lyd-fil
+document.getElementById("lydBillede").addEventListener("click", function() {
+  var lyd = document.getElementById("lydfil");
+  lyd.play();
+});
+
 //js til quiz
   function checkAnswer(button, isCorrect) { //Kaldes, når brugeren klikker på et svar. button er det klik-kede svar, isCorrect fortæller om det er rigtigt.
     const questionBox = button.parentElement; //Finder boksen (div) med spørgsmålet, hvor knappen hører til.
