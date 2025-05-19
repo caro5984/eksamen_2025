@@ -74,7 +74,7 @@ h1 {
 
 .tekst-billeder img{
   position: absolute; /*placerer billederne overpå hinanden*/
-  left: 5%; /*forskydning fra venstre*/
+  left: 10%; /*forskydning fra venstre*/
   width: 100%; /*størrelsen på 100%*/
   height: auto; /*højde tilpasset bredde*/
   opacity: 0; /*usynlig som standart*/
@@ -90,8 +90,8 @@ h1 {
 /* Klik‑hånd*/
 .hand-pointer{
   position: absolute; /*låser håndens placering*/
-  bottom: 27%; /*placering % fra bunden*/
-  left: 37%; /*placerer % fra venstre*/
+  bottom: 22%; /*placering % fra bunden*/
+  left: 40%; /*placerer % fra venstre*/
   width: 2%; /*størrelsen på hånden*/
   z-index: 999;/*Placerer hånden ovenpå tekstfælterne*/
   pointer-events: none; /* Kan ikke interageres med */
@@ -106,7 +106,7 @@ h1 {
 
 #lydBillede {
   position: absolute; /*låser håndens placering*/
-  left: 6%; /*placerer % fra venstre*/
+  left: 8%; /*placerer % fra venstre*/
   top: 20%;/*placering % fra toppen*/
   width: 3%; /*bredde på ikon*/
   height: auto; /*højde tilpasset bredde*/
@@ -129,6 +129,7 @@ h1 {
   justify-content: center; /* Centrerer horisontalt */
   align-items: center; /* Centrerer vertikalt */
   bottom: 50%; /* Skubber quizzen lidt op (kan virke som margin-bottom) */
+  left: 2%;
 }
 
 /*styling og postionering af selve billedet til quizboksen*/
@@ -261,26 +262,26 @@ gap: 1rem; /* Luft mellem svarene */
 
 /*Størrelse, placering og rotation på figur 1-9*/
 .figur1 {
-  top: 10%;
-  left: 37%;
+  top: 5%;
+  left: 20%;
   transform: rotate(90deg); /* Roterer med uret */
 }
 
 .figur2 {
   top: 30%;
-  left: 0.5%;
+  left: 1%;
   transform: rotate(210deg); /* Roterer med uret */
 }
 
 .figur3 {
-  top: 90%;
-  left: 3%;
+  top: 85%;
+  left: 4%;
   width: 6%; /*Ændre på nogle af størrelserne så der er forskel*/
 }
 
 .figur4 {
-  top: 70%;
-  left: 50%;
+  top: 30%;
+  left: 45%;
   transform: rotate(90deg); /* Roterer med uret */
 }
 
@@ -312,8 +313,8 @@ gap: 1rem; /* Luft mellem svarene */
 }
 
 .figur9 {
-  top: 93%;
-  left: 80%;
+  top: 75%;
+  left: 83%;
   transform: rotate(85deg); /* Roterer med uret */
   width: 2.7%; /*Ændre på nogle af størrelserne så der er forskel*/
 }
