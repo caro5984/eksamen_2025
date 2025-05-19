@@ -23,7 +23,7 @@ html, body {
   height: 100%; /* Gør elementet 100% af viewportens højde */
   overflow: hidden; /* Forhindrer både vandret og lodret scroll */
   touch-action: none; /* Forhindrer swipe, pinch-zoom og anden touch-adfærd på touch-skærme */
-  background-color: var(--stovet);
+  background-color: var(--stovet); /*baggrundsfarve*/
 }
 
 /*HEADER STYLING*/
@@ -40,6 +40,7 @@ html, body {
 .tilbage { 
   top: 1%;
   left: 1%; 
+  /*placere knappen lidt fra toppen og lidt fra venstre - samme placering på alle sider*/
 }
 
 /*Overskrift*/
@@ -50,50 +51,50 @@ h1 {
   color: var(--hvid); /*Teksten farve*/
   text-transform: uppercase; /*Gør alle bogstver store*/
   justify-self: center; /*Centrere teksten*/
-  margin-top: -1%;
+  margin-top: -1%; /*løfter teksten lidt op*/
 }
 
 /*MAIN STYLING*/
 /* flexer video og quiz */
 .layout {
-  display: flex;
-  width: 100%;
+  display: flex; /* Rækker layout (horisontal)*/
+  width: 100%; 
   height: 100%;
+  /*Fuld bredde og højde*/
 }
 
 /*TEKST-BILLEDER STYLING*/
 /*interaktive billeder med tekst*/
 .tekst-billeder{
-  position: relative;
-  width: 60%;
-  max-width: 60%;
-  cursor: pointer;
+  position: relative; /*placerer billederne relativt*/
+  width: 60%; /*bredde på container*/
+  max-width: 60%; /*max bredde*/
+  cursor: pointer; /* Indikerer klikbarhed */
 }
 
 .tekst-billeder img{
-  position: absolute;
-  top: 0;
-  left: 5%;
-  width: 100%;
-  height: auto;
-  opacity: 0;
-  transition: opacity .4s ease;
+  position: absolute; /*placerer billederne overpå hinanden*/
+  left: 5%; /*forskydning fra venstre*/
+  width: 100%; /*størrelsen på 100%*/
+  height: auto; /*højde tilpasset bredde*/
+  opacity: 0; /*usynlig som standart*/
+  transition: opacity .4s ease; /*blød overgang ved skift*/
 }
 
 /* kun det aktive billede vises */
 .tekst-billeder img.active{
-  opacity: 1;
-  z-index: 1;
+  opacity: 1; /*synligt*/
+  z-index: 1; /*placeres øverst*/
 }
 
 /* Klik‑hånd*/
 .hand-pointer{
-  position: absolute;
-  bottom: 27%;
-  left: 37%;
-  width: 2%;
+  position: absolute; /*låser håndens placering*/
+  bottom: 27%; /*placering % fra bunden*/
+  left: 37%; /*placerer % fra venstre*/
+  width: 2%; /*størrelsen på hånden*/
   z-index: 999;/*Placerer hånden ovenpå tekstfælterne*/
-  pointer-events: none; 
+  pointer-events: none; /* Kan ikke interageres med */
   animation: bounce 1.7s infinite;
 }
 
@@ -104,63 +105,61 @@ h1 {
 }
 
 #lydBillede {
-  position: absolute;
-  left: 6%;
-  top: 20%;
-  width: 3%;
-  height: auto;
-  border-radius: 10px;
+  position: absolute; /*låser håndens placering*/
+  left: 6%; /*placerer % fra venstre*/
+  top: 20%;/*placering % fra toppen*/
+  width: 3%; /*bredde på ikon*/
+  height: auto; /*højde tilpasset bredde*/
   z-index: 999;/*Placerer hånden ovenpå tekstfælterne*/
-  transition: transform 0.2s;
+  transition: transform 0.2s; /*blødere overgang ved hover*/
+  cursor: pointer; /* Gør musen til en pegende hånd ved hover */
 }
 
 #lydBillede:hover {
-  transform: scale(1.20);
+  transform: scale(1.20); /*scaller ikonet en smule op ved hover*/
 }
 
 /*QUIZ STYLING*/
 /*styling og postionering af både billed og tekst i quiz*/
 .quiz-wrapper {
   position: relative;
-  width: 90%;
-  height: 45%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  bottom: 50px;
+  width: 90%; /* Gør quizzen næsten fuld bredde */
+  height: 45%; /* Begrænser højden til under halvdelen af skærmen */
+  display: flex; /* Bruger flex til centrering */
+  justify-content: center; /* Centrerer horisontalt */
+  align-items: center; /* Centrerer vertikalt */
+  bottom: 50%; /* Skubber quizzen lidt op (kan virke som margin-bottom) */
 }
 
 /*styling og postionering af selve billedet til quizboksen*/
 .quizbillede {
-  width: 80%;
-  height: auto; 
+  width: 80%; /*tilpasser bredder*/
+  height: auto; /*tilpasser højde til bredde*/
 }
 
 /*styling og postionering af spørgsmål og svar + knap i quiz-contaioner*/
 .quiz-container {
-  position: absolute;
-  top: 5%;
-  left: px;
-  width: 90%;
-  height: 80%;
+  position: absolute; /* Gør det muligt at placere containeren ovenpå baggrundsbilledet */
+  top: 5%; /*placerer % fra toppen*/
+  width: 90%; /*gør bredden % bred*/
+  height: 80%; /*gør højde % høj*/
   padding: 6vh 5vw;  /* styrer afstanden mellem spørgsmålene*/
   display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  overflow-y: auto;
+  flex-direction: column; /* Elementer (spørgsmål og svar) vises under hinanden */
+  justify-content: space-evenly; /* Jævnt fordelt vertikalt */
+  align-items: center; /* Centrerer horisontalt */
 }
 
 /*styling og postionering af spørgsmål + svar i contaioner */
 .question {
-padding: 1px;
-width: 100%;
-max-width: 100%;
-text-align: center;/*HVIS DET SKAL ÆNDRES TIL VENSTRE STILLET - KIG HER*/
-color: var(--hvid);
-flex-wrap: wrap;
-justify-content: center;    /*HVIS DET SKAL ÆNDRES TIL VENSTRE STILLET - KIG HER*/
-gap: 1rem;
+padding: 1%; /*giver lidt padding på alle sider*/
+width: 100%; /*fuld bredde*/
+max-width: 100%; /*tilladeer fuld bredde*/
+text-align: center;/*Centere teksten*/
+color: var(--hvid); /*tekst farve*/
+flex-wrap: wrap; /* Hvis der er mange svar-knapper, ryger de ned på ny linje */
+justify-content: center;    /*centrer knapperne*/
+gap: 1rem; /* Luft mellem svarene */
 
 }
 
