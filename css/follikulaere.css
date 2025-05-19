@@ -359,21 +359,21 @@ footer{
 
 /* Styling og placering af talebobbel */
 #talebobbel{
-  width: 35%;
+  width: 42%;
   height: auto;
   display: flex;
   padding-left: 55%;
-  margin-top: -9%;
+  margin-top: -11%;
 }
 
 /* Styling og placering af tekst i talebobbel */
 .footer_tekst{
   font-family: var(--overskrift);
   font-weight: var(--overskrift-tyk);
-  font-size: 87%;
+  font-size: 85%;
   color: var(--stovet);
   text-align: center;
   display: flex;
-  padding-left: 63%;
-  margin-top: -6.5%;
+  padding-left: 67%;
+  margin-top: -7.5%;
 }

@@ -335,12 +335,12 @@ footer{
   height: auto;
   display: flex;
   justify-self: center;
-  margin-top: -11%;
+  margin-top: -10%;
 }
 
 /*talebobbel-billede*/
 #talebobbel{
-  width: 35%;
+  width: 42%;
   height: auto;
   display: flex;
   padding-left: 55%;
@@ -351,10 +351,10 @@ footer{
 .footer_tekst{
   font-family: var(--overskrift);
   font-weight: var(--overskrift-tyk);
-  font-size: 72%;
+  font-size: 85%;
   color: var(--stovet);
   text-align: center;
   display: flex;
-  padding-left: 63%;
-  margin-top: -6.3%;
+  padding-left: 65%;
+  margin-top: -7.5%;
 }
