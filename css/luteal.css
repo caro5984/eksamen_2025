@@ -160,16 +160,14 @@ color: var(--hvid); /*tekst farve*/
 flex-wrap: wrap; /* Hvis der er mange svar-knapper, ryger de ned på ny linje */
 justify-content: center;    /*centrer knapperne*/
 gap: 1rem; /* Luft mellem svarene */
-
 }
 
  /*styling og postionering af spørgsmål i quizzen */
 .question h2 {
-  margin-bottom: 0.1rem;
-  font-size: 15px;
+  margin-bottom: 0.1rem; /*afstand fra bund*/
+  font-size: 90%;
   font-family: var(--overskrift);
   text-align: center;
-
 }
 
  /*styling og postionering af svarmulighederne*/
