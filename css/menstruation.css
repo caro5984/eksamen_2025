@@ -335,17 +335,19 @@ h1{
   
    /* Styling og postionering af "vinterfigur" */
   #vinterfigur {
-    width: 10%;
+    width: 10%; /*størrelsen på firguren */
     height: auto;
-    margin-left: 40%;
+    display: flex;
+    justify-self: center; /*centrer figuren*/
+    padding-top: 2%;
   }
   
    /* Styling og postionering af talebobbel */
   #talebobbel {
-    width: 45%;
+    width: 42%;
     height: auto;
     position: absolute;
-    left: 50%;
+    left: 55%;
     bottom: 20px;
     z-index: -1;
   }
@@ -353,12 +355,11 @@ h1{
    /* Styling og postionering af tekst i talebobbel */
   .footer_tekst {
     position: absolute;
-    bottom: 72px;
-    padding-left: 63%;
-    margin-top: -6.3%;
+    padding-left: 65%;
+    margin-top: -8%;
     font-family: var(--overskrift);
     font-weight: var(--overskrift-tyk);
-    font-size: 87%;
+    font-size: 85%;
     color: var(--stovet);
     text-align: center;
    

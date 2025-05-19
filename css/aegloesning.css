@@ -261,18 +261,18 @@ h1{
 
    /*Styler på den bloddråbe figurens taleboble */
   #talebobbel{
-    width: 45%; /*størrelsen på taleboblen */
+    width: 42%; /*størrelsen på taleboblen */
     height: auto; /*højde på taleboblen*/
     display: flex; 
     padding-left: 55%; /*tilpasser til siden */
-    margin-top: -12%; /*tilpasser til siden */
+    margin-top: -11%; /*tilpasser til siden */
   }
   
    /*Styler på den bloddråbe figurens talebobble tekst */
   .footer_tekst{
     font-family: var(--overskrift); /*Tekstens font */
     font-weight: var(--overskrift-tyk); /*Tykkelse på fonten */
-    font-size: 87%; /*tekst størrelse*/
+    font-size: 85%; /*tekst størrelse*/
     color: var(--støvet); /*farven på teksten*/
     text-align: center; /*centrer teksten*/
     display: flex; 
