@@ -30,17 +30,16 @@ html, body {
 /*Tilbageknap til forside*/
 .knap {
   position: absolute; /* Gør det muligt at placere knapperne i hjørnerne */
-  width: 5%; /* Knappernes størrelse */
+  width: 4%; /* Knappernes størrelse */
   height: auto; /* Knappernes størrelse */
   display: block; /* Sørger for hele billedområdet er klikbart */
   cursor: pointer; /* Gør musen til en pegende hånd ved hover */
-  z-index: 10; /* Sørger for at knapperne ligger over andre elementer */
 } 
 
 /* Placering af knapper i hjørne af skærmen */
 .tilbage { 
-  top: 20; 
-  left: 40; 
+  top: 1%;
+  left: 1%; 
 }
 
 /*Overskrift*/
@@ -51,7 +50,7 @@ h1 {
   color: var(--hvid); /*Teksten farve*/
   text-transform: uppercase; /*Gør alle bogstver store*/
   justify-self: center; /*Centrere teksten*/
-  margin-top: 1%;
+  margin-top: -1%;
 }
 
 /*MAIN STYLING*/
@@ -102,6 +101,21 @@ h1 {
 @keyframes bounce{
   0%,100%{ transform: translateY(0); }
   50%   { transform: translateY(-8px); }
+}
+
+#lydBillede {
+  position: absolute;
+  left: 6%;
+  top: 20%;
+  width: 3%;
+  height: auto;
+  border-radius: 10px;
+  z-index: 999;/*Placerer hånden ovenpå tekstfælterne*/
+  transition: transform 0.2s;
+}
+
+#lydBillede:hover {
+  transform: scale(1.20);
 }
 
 /*QUIZ STYLING*/

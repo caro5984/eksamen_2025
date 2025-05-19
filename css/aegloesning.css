@@ -18,19 +18,28 @@ body {
   background-color: var(--hvid); /*Baggrundsfarven*/
 }
 
+/*  */
+html, body {
+  margin: 0; /* Fjerner standard margin */
+  padding: 0; /* Fjerner standard padding */
+  width: 100%; /* Gør elementet 100% af viewportens bredde */
+  height: 100%; /* Gør elementet 100% af viewportens højde */
+  overflow: hidden; /* Forhindrer scroll */
+  touch-action: none; /* Forhindrer uønsket touch-interaktion */
+}
+
 .knap {
     position: absolute; /* Gør det muligt at placere knapperne i hjørnerne */
-    width: 5%; /* Knappernes størrelse */
+    width: 4%; /* Knappernes størrelse */
     height: auto; /* Knappernes størrelse */
     display: block; /* Sørger for hele billedområdet er klikbart */
     cursor: pointer; /* Gør musen til en pegende hånd ved hover */
-    z-index: 10; /* Sørger for at knapperne ligger over andre elementer */
   } 
   
   /* Placering af knapper i hvert hjørne af skærmen */
   .tilbage { 
-    top: 2%; 
-    left: 20; 
+    top: 1%; 
+    left: 1%; 
   }
 
 h1{
