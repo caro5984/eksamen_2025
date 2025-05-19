@@ -204,6 +204,21 @@ h1 {
   }
 }
 
+#lydBillede {
+  position: absolute; /*låser håndens placering*/
+  left: 7%; /*placerer % fra venstre*/
+  top: 56%;/*placering % fra toppen*/
+  width: 3%; /*bredde på ikon*/
+  height: auto; /*højde tilpasset bredde*/
+  z-index: 999;/*Placerer hånden ovenpå tekstfælterne*/
+  transition: transform 0.2s; /*blødere overgang ved hover*/
+  cursor: pointer; /* Gør musen til en pegende hånd ved hover */
+}
+
+#lydBillede:hover {
+  transform: scale(1.20); /*scaller ikonet en smule op ved hover*/
+}
+
 /* INDHOLD TIL HØJRE */
 /*Styling og postionering af både billed og tekst i quiz - flytter på det hele samlet */
 .quiz-wrapper {
