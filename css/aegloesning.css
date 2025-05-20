@@ -60,6 +60,22 @@ h1{
     margin-top: -3%; /*tilpasser til siden */
     margin-left: -10%; /*tilpasser til siden */
 }
+
+#lydBillede {
+  position: absolute; /*låser håndens placering*/
+  left: 8%; /*placerer % fra venstre*/
+  top: 20%;/*placering % fra toppen*/
+  width: 3%; /*bredde på ikon*/
+  height: auto; /*højde tilpasset bredde*/
+  z-index: 999;/*Placerer hånden ovenpå tekstfælterne*/
+  transition: transform 0.2s; /*blødere overgang ved hover*/
+  cursor: pointer; /* Gør musen til en pegende hånd ved hover */
+}
+
+#lydBillede:hover {
+  transform: scale(1.20); /*scaller ikonet en smule op ved hover*/
+}
+
 .figur {
     position: absolute; /* Gør det muligt at placere figurerne i vilkårlige positioner */
     width: 4%; /* Størrelse på figurerne */
