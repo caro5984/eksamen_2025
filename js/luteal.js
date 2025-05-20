@@ -49,9 +49,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 //js til lyd-fil
-document.getElementById("lydBillede").addEventListener("click", function() {
-  var lyd = document.getElementById("lydfil");
-  lyd.play();
+document.getElementById("lydBillede").addEventListener("click", function() { //Finder elementet lydBillede
+  var lyd = document.getElementById("lydfil"); //Laver elementet til et variabek
+  lyd.play(); //spiller lydfilen ved click
 });
 
 //js til quiz
