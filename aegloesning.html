@@ -16,16 +16,15 @@
     <link rel="stylesheet" href="css/aegloesning.css">
 </head>
 <body>
-    
+     <!-- Tilbage knap og overskrift i headeren -->
     <header>
         <a href="index.html">
             <img src="images/tilbage3.png" alt="Gå tilbage til forsiden" class="knap tilbage">
         </a>
-        
         <h1>ægløsningsfasen</h1>
     </header>
+    <!-- sommerfugle på baggrunden-->
     <main>
-
         <div class="sommerfugle">
             <img src="images/Sommerfugl.png" alt="Sommerfugle" class="figur figur1">
             <img src="images/Sommerfugl.png" alt="sommerfugle" class="figur figur2">
@@ -38,16 +37,16 @@
             <img src="images/Sommerfugl.png" alt="sommerfugle" class="figur figur9">
         </div>
 
+        <!--layout til siden opdelt i inforgrafik og quiz-->
         <div class="layout">
-
         <img src="images/ÆGGE infographic.png" alt="ægløsning infographic" id="infographic">
 
-      
-        
         <div class="quiz-wrapper">
-    
+
+            <!--blå container til quiz-->
             <img src="/images/quiz blob 2.png" alt="quiz billede" class="quizbillede"/>
 
+            <!--spørgsmål og svar til quiz-->
                 <div class="quiz-container">
             
                     <div class="question">
@@ -70,18 +69,19 @@
                         <button onclick="checkAnswer(this, false)">0-12 timer</button>
                         <button onclick="checkAnswer(this, false)">24-42 timer</button>
                     </div>
-
+                    <!--reset knap gjort usynlig og synlig-->
                     <button id="reset-btn" onclick="resetQuiz()" style="display: none;">Prøv igen</button>
                 </div>
-                
         </div>
     </div>
     </main>
 
+<!--footer med figur og talebobbel-->
 <footer>
     <img src="images/sommerfigur.png" alt="sommerfigur" id="sommerfigur">
     <img id="talebobbel" src="images/Talebobbel.png" alt="talebobbel">
 
+<!--tekst til footer-->
     <p class="footer_tekst"> 
     Hej  med dig! <br>
     Nu er vi nået til ægløsningsfasen - også kendt som sommer <br>           
