@@ -63,6 +63,13 @@ let currentIndex = 0;
     images[currentIndex].classList.add('active');
   }
 
+//js til lyd-fil
+document.getElementById("lydBillede").addEventListener("click", function() { //Finder elementet lydBillede
+  var lyd = document.getElementById("lydfil"); //Laver elementet til et variabek
+  lyd.play(); //spiller lydfilen ved click
+});
+
+
 //JS TIL QUIZZEN I HØJRE SIDE
 
 // Funktion der håndterer, når en svar-knap bliver trykket på 

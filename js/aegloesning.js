@@ -44,6 +44,12 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+//js til lyd-fil
+document.getElementById("lydBillede").addEventListener("click", function() { //Finder elementet lydBillede
+  var lyd = document.getElementById("lydfil"); //Laver elementet til et variabek
+  lyd.play(); //spiller lydfilen ved click
+});
+
 function checkAnswer(button, isCorrect) {
   const questionBox = button.parentElement;
   const allButtons = questionBox.querySelectorAll('button');
