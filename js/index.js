@@ -22,14 +22,16 @@ modelViewer.addEventListener('camera-change', () => {
   }, 1200); // 1200 millisekunder = 1,2 sekunder
 });
 
+//KNAPPERNE I HJØRNENE PÅ INDEX-SIDEN
+
 /** Får knapperne på forsiden til at flyde over siden som en glidende overgang til den næste side, med et overlay i knappens farve */
-//knapperne på forsiden
-const links = document.querySelectorAll('a[href$=".html"]');
+
+const links = document.querySelectorAll('a[href$=".html"]'); //finder alle <a>-tags, der linker til en HTML-side (slutter på .html). Det er vores knapper.
 const overlay = document.getElementById('transitionOverlay');
 
 links.forEach(link => {
   link.addEventListener('click', function (e) {
-    e.preventDefault();
+    e.preventDefault(); //forhindrer siden i at skifte med det samme, så vi kan nå at se animationen
 
     const img = this.querySelector('img');
     const rect = img.getBoundingClientRect();
