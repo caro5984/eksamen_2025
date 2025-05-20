@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // laver rotation for hver sommerfugl))
   sommerfugle.forEach((sommerfugl) => {
     let angle = 1; // Startvinkel (i grader)
-    let direction = 2; // Rotationsretning: 1 = med uret, -1 = mod uret
+    let direction = 2; // Rotationsretning: 2 = med uret, -2 = mod uret
 
     // Gentag funktionen med jævne mellemrum (hver 100 millisekunder)
     setInterval(() => {
