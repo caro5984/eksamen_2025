@@ -270,10 +270,6 @@ h1{
     pointer-events: auto; /* gør knappen klikbar */
     font-family: var(--overskrift); /*vælger den korrekte font tils knappen */
   }
-  
-  #reset-btn:hover {
-    background-color: var(--hvid);
-  }
 
   /*Styler på den bloddråbe figuren */
   #sommerfigur{
@@ -301,6 +297,6 @@ h1{
     color: var(--støvet); /*farven på teksten*/
     text-align: center; /*centrer teksten*/
     display: flex; 
-    padding-left: 65%; /*tilpasser til siden */
+    padding-left: 63%; /*tilpasser til siden */
     margin-top: -7.5%; /*tilpasser til siden */
   }
