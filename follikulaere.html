@@ -45,18 +45,18 @@
     </div>
 
 <!--Section til alt indhold på siden - sørger for at tekst indholdet og quizzen kan flexes-->
-    <section class="indhold">
+    <div class="indhold">
 
 <!--container med de to informationsfigurer med tekster-->
-        <section class="tekst-billeder" onclick="nextImage()">
-          <img src="images/tekst1follikulaer.png" class="active">
-          <img src="images/tekst2follikulaer.png">
-          <img src="images/tekst3follikulaer.png">
-        </section>
+        <div class="tekst-billeder" onclick="nextImage()">
+          <img src="images/tekst1follikulaer.png" alt="tekst follikulaer" class="active">
+          <img src="images/tekst2follikulaer.png" alt="tekst follikulaer">
+          <img src="images/tekst3follikulaer.png" alt="tekst follikulaer">
+        </div>
 
 <!--quiz-wrapper container til quiz- indeholder baggrundsbillede, spørgsmål, svarmuligheder + reset knap - så det hele kan rykkes på -->
         <section class="quiz-wrapper">
-          <img src="/images/blob2.png" alt="quiz billede" class="quizbillede"/> <!--baggrundsbillede/boks til quiz-->
+          <img src="images/blob2.png" alt="quiz billede" class="quizbillede"> <!--baggrundsbillede/boks til quiz-->
 
  <!--contaioner kun til spørgsmål, svar og reset knap - bruges så man kan kontrollere opstilling af teksten-->
           <div class="quiz-container">
@@ -86,11 +86,12 @@
 <!--Reset knap - "prøv igen"/"flot klaret -knap" indsat her-->
             <button id="reset-btn" onclick="resetQuiz()" style="display: none;">Prøv igen</button>
         </div>
+        </section>
+    </div>
 
 <!-- Hånden placeres her, inde i indhold -->
-    </section>
         <img src="images/tryk1.png" alt="Klik her" class="hand-pointer">
-    </section>
+    
 
 <!--Højtaler ikon + lydfil-->
 <img src="images/lydicon3.png" alt="klik_for_lyd" id="lydBillede">

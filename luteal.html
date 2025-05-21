@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/luteal.css">
 
     <!--Logo-->
-    <link rel="icon" type="image/x-icon" href="/images/efterårsfigur.png">
+    <link rel="icon" type="image/x-icon" href="/images/efteraarsfigur.png">
 
     <!-- Font fra google fonts: https://fonts.google.com/selection -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -32,10 +32,10 @@
         <div class="layout">
 
         <!--container med de to informationsfigurer med tekster-->
-            <section class="tekst-billeder" onclick="nextImage()">
-                <img src="images/lutealtekst1.png" class="active">
-                <img src="images/lutealtekst2.png">
-              </section>
+            <div class="tekst-billeder" onclick="nextImage()">
+                <img src="images/lutealtekst1.png" alt="tekst-billede1" class="active">
+                <img src="images/lutealtekst2.png" alt="tekst-billede2">
+            </div>
 
             <!-- Hånden placeres her, indikerer at man kan klikke på informationerne -->
             <img src="images/tryk1.png" alt="Klik her" class="hand-pointer">
@@ -46,7 +46,7 @@
     
             <!--quiz-wrapper container til quiz - indeholder baggrundsbillede, spørgsmål, svarmuligheder + reset knap - så det hele kan rykkes på -->
             <div class="quiz-wrapper">
-                <img src="/images/blob.png" alt="quiz billede" class="quizbillede"/> <!--baggrundsbillede/boks til quiz-->
+                <img src="images/blob.png" alt="quizbillede" class="quizbillede"> <!--baggrundsbillede/boks til quiz-->
                   
                 <!--contaioner kun til spørgsmål, svar og reset knap - bruges så man kan kontrollere opstilling af teksten-->
                     <div class="quiz-container">
@@ -97,7 +97,7 @@
     <footer>
 
     <!--Billede med bloddråbe figur-->
-        <img id="efteraarsfigur" src="images/efterårsfigur.png" alt="efterårsfigur">
+        <img id="efteraarsfigur" src="images/efteraarsfigur.png" alt="efterårsfigur">
 
     <!--Billede med talebobbel-->
         <img id="talebobbel" src="images/talebobbel.png" alt="talebobbel">

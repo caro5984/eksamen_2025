@@ -63,8 +63,8 @@ h1{
 
 #lydBillede {
   position: absolute; /*låser håndens placering*/
-  left: 8%; /*placerer % fra venstre*/
-  top: 20%;/*placering % fra toppen*/
+  left: 34%; /*placerer % fra venstre*/
+  top: 55%;/*placering % fra toppen*/
   width: 3%; /*bredde på ikon*/
   height: auto; /*højde tilpasset bredde*/
   z-index: 999;/*Placerer hånden ovenpå tekstfælterne*/
