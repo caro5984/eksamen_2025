@@ -297,6 +297,6 @@ h1{
     color: var(--støvet); /*farven på teksten*/
     text-align: center; /*centrer teksten*/
     display: flex; 
-    padding-left: 65%; /*tilpasser til siden */
+    padding-left: 63%; /*tilpasser til siden */
     margin-top: -7.5%; /*tilpasser til siden */
   }
