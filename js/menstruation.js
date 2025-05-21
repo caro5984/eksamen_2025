@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const snefnug = document.querySelectorAll(".figur1,.figur3,.figur5,.figur7,.figur9,.figur11");
 
   // laver rotation for hver snefnug ))
-  snefnug.forEach((snefnug) => {
+  blomster.forEach((snefnug) => {
     let angle = 1; // Startvinkel (i grader)
     let direction = 2; // Rotationsretning: 1 = med uret, -1 = mod uret
 
@@ -47,13 +47,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-
-// Funktion der håndterer, når en svar-knap bliver trykket på 
+//Funktion der håndterer, når en svar-knap bliver trykket på 
 function checkAnswer(button, isCorrect) {
     const questionBox = button.parentElement; // Finder boksen der indeholder spørgsmålet
     const allButtons = questionBox.querySelectorAll('button'); // Finder alle svarmuligheder i boksen
   
-    // Hvis knapperne allerede er deaktiveret, gør ingenting (spørgsmålet er allerede besvaret)
+    //Hvis knapperne allerede er deaktiveret, gør ingenting – spørgsmålet er allerede besvaret
     if (allButtons[0].disabled) return;
   
     // Deaktiver alle knapper og fjerner evt. tidligere markering
