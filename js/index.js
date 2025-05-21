@@ -26,40 +26,40 @@ modelViewer.addEventListener('camera-change', () => {
 
 /** Får knapperne på forsiden til at flyde over siden som en glidende overgang til den næste side, med et overlay i knappens farve */
 
-const links = document.querySelectorAll('a[href$=".html"]'); //finder alle <a>-tags, der linker til en HTML-side (slutter på .html). Det er vores knapper.
-const overlay = document.getElementById('transitionOverlay');
+const links = document.querySelectorAll('a[href$=".html"]'); //Finder alle <a>-tags, der linker til en HTML-side (slutter på .html). Det er vores knapper.
+const overlay = document.getElementById('transitionOverlay'); // Henter det element, der fungerer som overlay til overgangseffekten (den runde cirkel).
 
-links.forEach(link => {
-  link.addEventListener('click', function (e) {
+links.forEach(link => { // Looper igennem hvert link (hver knap), så vi kan tilføje funktionalitet til dem.
+  link.addEventListener('click', function (e) { // Tilføjer en 'click'-event til hvert link. Kører, når brugeren klikker på en knap.
     e.preventDefault(); //forhindrer siden i at skifte med det samme, så vi kan nå at se animationen
 
-    const img = this.querySelector('img');
-    const rect = img.getBoundingClientRect();
-    const farve = this.dataset.farve || '#000';
+    const img = this.querySelector('img'); // Finder billedet (<img>) inde i det klikkede link. Altså billedet der er sat ind som knap)
+    const rect = img.getBoundingClientRect(); // Finder billedets placering og størrelse på skærmen.
+    const farve = this.dataset.farve || '#000'; // Tager den farve, der er sat som data-attribut på linket i HTML (data-farve), eller bruger sort som standard.
 
-    overlay.style.backgroundColor = farve;
-    overlay.style.left = rect.left + rect.width / 2 + 'px';
-    overlay.style.top = rect.top + rect.height / 2 + 'px';
-    overlay.classList.add('expand');
+    overlay.style.backgroundColor = farve; // Giver overlayet den rigtige baggrundsfarve, som matcher den næste sides farvetema.
+    overlay.style.left = rect.left + rect.width / 2 + 'px'; // Positionerer overlayets center i midten af knappen.
+    overlay.style.top = rect.top + rect.height / 2 + 'px'; // Positionerer overlayets center i midten af knappen.
+    overlay.classList.add('expand'); // Tilføjer CSS-klassen 'expand', som sætter gang i animationen (cirklen vokser).
 
-    const clone = img.cloneNode(true);
-    clone.style.position = 'fixed';
-    clone.style.left = rect.left + 'px';
-    clone.style.top = rect.top + 'px';
-    clone.style.width = rect.width + 'px';
-    clone.style.height = rect.height + 'px';
-    clone.style.transition = 'transform 0.7s ease-in-out, opacity 0.7s';
-    clone.style.zIndex = 1001;
-    document.body.appendChild(clone);
+    const clone = img.cloneNode(true); // Laver en kopi af det billede (knap), der blev klikket på.
+    clone.style.position = 'fixed'; // Gør kopien "fast" i forhold til skærmen og er ikke afhængig af scroll eller layout.
+    clone.style.left = rect.left + 'px'; // Giver kopien samme position som originalen.
+    clone.style.top = rect.top + 'px'; // Giver kopien samme position som originalen.
+    clone.style.width = rect.width + 'px'; // Giver kopien samme bredde som originalen.
+    clone.style.height = rect.height + 'px'; // Giver kopien samme højde som originalen.
+    clone.style.transition = 'transform 0.7s ease-in-out, opacity 0.7s'; // Definerer animationen: Kopien skal vokse og forsvinde blødt.
+    clone.style.zIndex = 1001; // Sørger for at kopien ligger over alt andet (også overlayet), så man kan se at knappen gennem hele animationen.
+    document.body.appendChild(clone); // Tilføjer kopien til dokumentet, så den faktisk vises og kan animeres.
 
-    setTimeout(() => {
-      clone.style.transform = 'scale(20)';
-      clone.style.opacity = '0';
+    setTimeout(() => { // Starter en animation lidt forsinket (efter 10ms), så browseren når at registrere kopien.
+      clone.style.transform = 'scale(20)'; // Kopien vokser sig 20 gange større).
+      clone.style.opacity = '0'; // Kopien fader ud.
     }, 10);
 
-    setTimeout(() => {
-      window.location.href = this.href;
+    setTimeout(() => { // Venter 700ms (samme som animationens varighed), før siden skifter.
+      window.location.href = this.href; // Siden skifter (href fra linket).
     }, 700);
   });
 });
-//knapperne slutter
+//KNAPPERNE SLUTTER
