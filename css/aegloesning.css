@@ -270,10 +270,6 @@ h1{
     pointer-events: auto; /* gør knappen klikbar */
     font-family: var(--overskrift); /*vælger den korrekte font tils knappen */
   }
-  
-  #reset-btn:hover {
-    background-color: var(--hvid);
-  }
 
   /*Styler på den bloddråbe figuren */
   #sommerfigur{
