@@ -63,8 +63,8 @@ h1{
 
 #lydBillede {
   position: absolute; /*låser håndens placering*/
-  left: 8%; /*placerer % fra venstre*/
-  top: 20%;/*placering % fra toppen*/
+  left: 34%; /*placerer % fra venstre*/
+  top: 55%;/*placering % fra toppen*/
   width: 3%; /*bredde på ikon*/
   height: auto; /*højde tilpasset bredde*/
   z-index: 999;/*Placerer hånden ovenpå tekstfælterne*/
@@ -269,10 +269,6 @@ h1{
     transition: background-color 0.3s; /*ændre farve ved hover*/
     pointer-events: auto; /* gør knappen klikbar */
     font-family: var(--overskrift); /*vælger den korrekte font tils knappen */
-  }
-  
-  #reset-btn:hover {
-    background-color: var(--hvid);
   }
 
   /*Styler på den bloddråbe figuren */

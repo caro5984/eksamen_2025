@@ -235,7 +235,7 @@ h1{
   width: 100%;
   max-width: 100%;
   text-align: center; 
-  color: white;
+  color: var(--hvid);
   flex-wrap: wrap;
   justify-content: center;   
   gap: 1rem;
@@ -260,7 +260,7 @@ h1{
         cursor: pointer;
         transition: background-color 0.3s;
         background-color: #ffffff00;
-        color: #fff;
+        color: var(--hvid);
         text-align: center;   /*HVIS DET SKAL ÆNDRES TIL VENSTRE STILLET - KIG HER*/
         left: 0;    /*HVIS DET SKAL ÆNDRES TIL VENSTRE STILLET - KIG HER*/
        
@@ -269,13 +269,13 @@ h1{
     /*styling af knap, ved korrekt svar*/
   .question button.correct {
     background-color: rgba(0, 128, 0, 0.752);
-    color: white;
+    color: var(--hvid);
   }
   
    /*styling af knap, ved forkert svar*/
   .question button.incorrect {
     background-color: rgba(220, 20, 60, 0.376);
-    color: white;
+    color: var(--hvid);
   }
 
   
@@ -288,7 +288,7 @@ h1{
     transform: translateY(-50%);
     width: 1rem;
     height: 1rem;
-    border: 2px solid #fff;
+    border: 2px solid var(--hvid);
     border-radius: 50%;
     background-color: transparent;
     transition: background-color 0.3s, border-color 0.3s;
@@ -296,8 +296,8 @@ h1{
   
   /* Cirkelen udfyldt ved klik */
   .question button.selected::before {
-    background-color: #fff;
-    border-color: #fff;
+    background-color: var(--hvid);
+    border-color: var(--hvid);
   }
   
   /* Farveændring ved korrekt*/
@@ -316,7 +316,7 @@ h1{
   #reset-btn {
     padding: 0.8rem 1.5rem;
     font-size: 12px;
-    background-color: #ffffffcc;
+    background-color: var(--hvid);
     border: none;
     border-radius: 5rem;
     cursor: pointer;
@@ -327,10 +327,6 @@ h1{
     font-family: var(--overskrift);
   }
   
-     /* Hover effekt til  "Prøv igen / "Flot klaret" -knap */
-  #reset-btn:hover {
-    background-color: #ffffff;
-  }
   /* FOOTER STARTER HER */
   
    /* GENERELT TIL FOOTER */

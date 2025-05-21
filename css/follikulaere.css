@@ -350,11 +350,6 @@ gap: 1rem;
   font-family: var(--overskrift);
 }
 
-/* Hover effekt til  "Prøv igen / "Flot klaret" -knap */
-#reset-btn:hover {
-  background-color: var(--hvid);
-}
-
 /* FOOTER CSS STARTER HER */
 footer{
   position: fixed;
