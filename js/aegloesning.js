@@ -1,5 +1,4 @@
-//Her får vi hjælp fra ChatGPT: https://chatgpt.com/share/682f166c-a5cc-8010-ab36-8fa46eaed141
-// Vælger hvilke sommerfugle der styles på siden, og tilføjer animation til dem))
+// Vælger hvilke sommerfugle der styles på siden, og tilføjer animation til dem)) //Her får vi hjælp fra ChatGPT: https://chatgpt.com/share/682f166c-a5cc-8010-ab36-8fa46eaed141
 document.addEventListener("DOMContentLoaded", () => {
   const sommerfugle = document.querySelectorAll(".figur1,.figur3,.figur5,.figur7,.figur9");
 
