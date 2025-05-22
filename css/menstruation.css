@@ -321,7 +321,7 @@ h1{
     border-radius: 5rem;
     cursor: pointer;
     font-weight: bold;
-    color: #333;
+    color: var(--lilla);
     transition: background-color 0.3s;
     pointer-events: auto;
     font-family: var(--overskrift);
