@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+//Her får vi hjælp fra ChatGPT: https://chatgpt.com/share/682f166c-a5cc-8010-ab36-8fa46eaed141
+>>>>>>> 553aa4b9dde499ec3d8f838a9ca49f3df81255b1
 // Vælger hvilke sommerfugle der styles på siden, og tilføjer animation til dem))
 document.addEventListener("DOMContentLoaded", () => {
   const sommerfugle = document.querySelectorAll(".figur1,.figur3,.figur5,.figur7,.figur9");
@@ -43,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
- //js til quiz
+ //js til quiz - Vi har fået hjælp fra ChatGPT her: https://chatgpt.com/share/68272222-0c44-8003-a104-c076eb3a12c0
 function checkAnswer(button, isCorrect) {
   const questionBox = button.parentElement;
   const allButtons = questionBox.querySelectorAll('button');

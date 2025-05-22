@@ -1,5 +1,5 @@
 //js til snefnug i baggrunden
-
+//Her får vi hjælp fra ChatGPT: https://chatgpt.com/share/682f166c-a5cc-8010-ab36-8fa46eaed141
 // Vælger hvilke snefnug der styles på siden, og tilføjer animation til dem))
 document.addEventListener("DOMContentLoaded", () => {
   const snefnug = document.querySelectorAll(".figur1,.figur3,.figur5,.figur7,.figur9,.figur11");
@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-
+// Vi har fået hjælp fra ChatGPT her: https://chatgpt.com/share/68272222-0c44-8003-a104-c076eb3a12c0
 //Funktion der håndterer, når en svar-knap bliver trykket på 
 function checkAnswer(button, isCorrect) {
     const questionBox = button.parentElement; // Finder boksen der indeholder spørgsmålet
@@ -120,8 +120,8 @@ function checkAnswer(button, isCorrect) {
   }
   
 
-//js til video
-
+//Js til video 
+// Vi har fået hjælp fra ChatGPT her: https://chatgpt.com/share/682f1590-33e8-8003-8823-37c1b5693ba4
   // Afspilning af video, når siden er klar
   document.addEventListener("DOMContentLoaded", function () {
     const video = document.getElementById("video");

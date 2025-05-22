@@ -1,5 +1,5 @@
 //js til blade i baggrunden
-
+//Her får vi hjælp fra ChatGPT: https://chatgpt.com/share/682f166c-a5cc-8010-ab36-8fa46eaed141
 // Vælger hvilke blade der styles på siden, og tilføjer animation til dem))
 document.addEventListener("DOMContentLoaded", () => {
     const bladeGruppe1 = document.querySelectorAll(".figur1,.figur3,.figur5,.figur7,.figur9"); //gemmer de valgt blade i en liste
@@ -54,7 +54,7 @@ document.getElementById("lydBillede").addEventListener("click", function() { //F
   lyd.play(); //spiller lydfilen ved click
 });
 
-//js til quiz
+//js til quiz - vi har fået hjælp fra ChatGPT her: https://chatgpt.com/share/68272222-0c44-8003-a104-c076eb3a12c0
   function checkAnswer(button, isCorrect) { //Kaldes, når brugeren klikker på et svar. button er det klik-kede svar, isCorrect fortæller om det er rigtigt.
     const questionBox = button.parentElement; //Finder boksen (div) med spørgsmålet, hvor knappen hører til.
     const allButtons = questionBox.querySelectorAll('button'); //Henter alle svarmuligheder i den boks.
