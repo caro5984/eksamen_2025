@@ -43,6 +43,12 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+//js til lyd-fil
+document.getElementById("lydBillede").addEventListener("click", function() { //Finder elementet lydBillede
+  var lyd = document.getElementById("lydfil"); //Laver elementet til et variabek
+  lyd.play(); //spiller lydfilen ved click
+});
+
  //js til quiz - Vi har fået hjælp fra ChatGPT her: https://chatgpt.com/share/68272222-0c44-8003-a104-c076eb3a12c0
 function checkAnswer(button, isCorrect) {
   const questionBox = button.parentElement;
