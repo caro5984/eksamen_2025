@@ -247,10 +247,6 @@ gap: 1rem; /* Luft mellem svarene */
   font-family: var(--overskrift);
 }
 
-#reset-btn:hover {
-  background-color: var(--hvid);
-}
-
 /*BLADE STYLING*/
 /*generel styling af alle blade */
 .figur {
