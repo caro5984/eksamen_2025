@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const snefnug = document.querySelectorAll(".figur1,.figur3,.figur5,.figur7,.figur9,.figur11");
 
   // laver rotation for hver snefnug ))
-  blomster.forEach((snefnug) => {
+  snefnug.forEach((snefnug) => {
     let angle = 1; // Startvinkel (i grader)
     let direction = 2; // Rotationsretning: 1 = med uret, -1 = mod uret
 
@@ -93,7 +93,7 @@ function checkAnswer(button, isCorrect) {
       if (hasIncorrect) allCorrect = false;
     });
   
-    console.log("checkQuizStatus:", { allAnswered, allCorrect });
+    
   
     // Hvis alle spørgsmål er besvaret, vis reset-knappen med tilhørende besked
     if (allAnswered) {

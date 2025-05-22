@@ -245,13 +245,13 @@ h1{
     border-color: var(--hvid);
   }
   
-  /* Farveændring ved korrekt*/
+/* Farveændring af cirkelen ved korrekt*/
   .question button.correct::before {
     background-color: #0f5528; /*Den grønne farve der er brugt farven på stilken på blomsten på forårsfiguren*/;;
     border-color: #0f5528; 
   }
   
-  /* Farveændring ved forkert */
+ /* Farveændring af cirkelen ved forkert*/
   .question button.incorrect::before {
     background-color: var(--postkasserod);
     border-color: var(--postkasserod);
