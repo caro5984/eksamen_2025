@@ -1,4 +1,3 @@
-
 // Vælger hvilke sommerfugle der styles på siden, og tilføjer animation til dem))
 document.addEventListener("DOMContentLoaded", () => {
   const sommerfugle = document.querySelectorAll(".figur1,.figur3,.figur5,.figur7,.figur9");
